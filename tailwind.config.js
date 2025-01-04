@@ -1,29 +1,20 @@
-/** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         primary: '#3B82F6',
-        secondary: '#10B981',
+        secondary: '#60A5FA',
+        'chat-bg': '#f8fafc',
+        'chat-header': '#1e293b',
+        'chat-input': '#f1f5f9',
       },
-      animation: {
-        'gradient': 'gradient 8s linear infinite',
-      },
-      keyframes: {
-        gradient: {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
-        },
+      boxShadow: {
+        'chat': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
     },
   },
