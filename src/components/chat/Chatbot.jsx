@@ -10,6 +10,7 @@ const Chatbot = () => {
   const [currentStreamedMessage, setCurrentStreamedMessage] = useState('');
   const [modelName, setModelName] = useState('');
   const messagesEndRef = useRef(null);
+  const inputRef = useRef(null);
 
   useEffect(() => {
     // Charger le nom du modèle au démarrage
@@ -18,28 +19,15 @@ const Chatbot = () => {
       .then(data => setModelName(data.model))
       .catch(error => console.error('Error fetching model name:', error));
 
-    // Pré-charger le modèle et l'historique
-    Promise.all([
-      fetch('http://localhost:3001/api/chat/start', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ force: true })
-      }),
-     fetch('http://localhost:3001/api/chat/history')
-    ])
-      .then(async ([startRes, historyRes]) => {
-        const history = await historyRes.json();
-        if (history.messages) {
-          const formattedMessages = history.messages.map(msg => ({
-            text: msg.content,
-            isUser: msg.role === 'user'
-          }));
-          setMessages(formattedMessages);
-        }
-      })
-      .catch(error => console.error('Error initializing chat:', error));
+    // Initialiser le chat
+    fetch('http://localhost:3001/api/chat/start', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ force: true })
+    })
+    .catch(error => console.error('Error initializing chat:', error));
 
     // Nettoyer l'état du chat lors du démontage du composant
     return () => {
@@ -50,7 +38,9 @@ const Chatbot = () => {
   }, []);
 
   useEffect(() => {
-    scrollToBottom();
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [messages, currentStreamedMessage]);
 
   const scrollToBottom = () => {
@@ -88,13 +78,12 @@ const Chatbot = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!inputMessage.trim()) return;
+  const handleSendMessage = async () => {
+    if (inputMessage.trim() === '') return;
 
     const userMessage = inputMessage.trim();
-    setMessages(prev => [...prev, { text: userMessage, isUser: true }]);
     setInputMessage('');
+    setMessages(prev => [...prev, { text: userMessage, isUser: true }]);
     setIsTyping(true);
     setCurrentStreamedMessage('');
 
@@ -153,101 +142,111 @@ const Chatbot = () => {
     setIsFullScreen(!isFullScreen);
   };
 
-  const chatContainerClass = `
-    ${isFullScreen ? 'fixed inset-0 w-full h-full' : 'w-96 h-[600px]'}
-    bg-chat-bg rounded-lg shadow-chat flex flex-col transition-all duration-300 ease-in-out
-  `;
-
-  const renderMessages = () => {
-    return (
-      <>
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} mb-4`}
-          >
-            <div
-              className={`max-w-[70%] rounded-lg p-3 ${
-                message.isUser
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-gray-200 text-gray-800'
-              }`}
-            >
-              {message.text}
-            </div>
-          </div>
-        ))}
-        {currentStreamedMessage && (
-          <div className="flex justify-start mb-4">
-            <div className="max-w-[70%] rounded-lg p-3 bg-gray-200 text-gray-800">
-              {currentStreamedMessage}
-            </div>
-          </div>
-        )}
-        {isTyping && !currentStreamedMessage && (
-          <div className="flex justify-start mb-4">
-            <div className="max-w-[70%] rounded-lg p-3 bg-gray-200 text-gray-800">
-              En train d'écrire...
-            </div>
-          </div>
-        )}
-      </>
-    );
-  };
-
   return (
     <div className={`fixed z-50 ${isFullScreen ? 'inset-0' : 'bottom-4 right-4'}`}>
-      {isOpen ? (
-        <div className={chatContainerClass}>
-          <div className="bg-chat-header text-white p-4 rounded-t-lg flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-3 h-3 rounded-full bg-red-500" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500" />
-              <div className="w-3 h-3 rounded-full bg-green-500" />
+      {isOpen && (
+        <div className={`fixed bottom-20 right-4 w-96 bg-white rounded-lg shadow-xl overflow-hidden ${
+          isFullScreen ? 'fixed inset-0 w-full h-full z-50' : 'z-40'
+        }`}>
+          <div className="flex justify-between items-center p-4 bg-gray-700 text-white">
+            <div className="flex items-center space-x-2">
+              <FiMessageSquare className="text-xl" />
+              <span className="font-semibold">M-IA Assistant {modelName && `(${modelName})`}</span>
             </div>
-            <h3 className="font-medium text-lg flex-1 text-center">M-IA Assistant</h3>
             <div className="flex items-center space-x-2">
               <button
-                onClick={toggleFullScreen}
-                className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
+                onClick={() => setIsFullScreen(!isFullScreen)}
+                className="text-white hover:text-gray-300 focus:outline-none"
               >
-                {isFullScreen ? <FiMinimize size={20} /> : <FiMaximize size={20} />}
+                {isFullScreen ? <FiMinimize /> : <FiMaximize />}
               </button>
               <button
-                onClick={toggleChat}
-                className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
+                onClick={() => setIsOpen(false)}
+                className="text-white hover:text-gray-300 focus:outline-none"
               >
-                <FiX size={20} />
+                <FiX />
               </button>
             </div>
           </div>
-          
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
-            {renderMessages()}
+
+          <div 
+            className={`overflow-y-auto bg-gray-50 ${isFullScreen ? 'h-[calc(100vh-120px)]' : 'h-96'}`}
+            style={{ zIndex: 50 }}
+          >
+            {messages.map((message, index) => (
+              <div
+                key={index}
+                className={`p-4 ${message.isUser ? 'bg-gray-50' : 'bg-white'}`}
+              >
+                <div className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
+                  <div
+                    className={`max-w-[80%] rounded-lg p-3 ${
+                      message.isUser
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 text-gray-800'
+                    }`}
+                  >
+                    <p className="whitespace-pre-wrap">{message.text}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            {isTyping && (
+              <div className="p-4">
+                <div className="flex justify-start">
+                  <div className="max-w-[80%] bg-gray-200 rounded-lg p-3 text-gray-800">
+                    {currentStreamedMessage ? (
+                      <p className="whitespace-pre-wrap">{currentStreamedMessage}</p>
+                    ) : (
+                      <div className="flex space-x-2">
+                        <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                        <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                        <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
             <div ref={messagesEndRef} />
           </div>
 
-          <form onSubmit={handleSubmit} className="p-4 bg-white border-t border-gray-100">
-            <div className="flex space-x-2">
+          <div className="p-4 bg-white border-t border-gray-100" style={{ zIndex: 51 }}>
+            <form 
+              onSubmit={(e) => { 
+                e.preventDefault(); 
+                e.stopPropagation();
+                handleSendMessage(); 
+              }} 
+              className="flex space-x-2"
+            >
               <input
+                ref={inputRef}
                 type="text"
                 value={inputMessage}
                 onChange={(e) => setInputMessage(e.target.value)}
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleSendMessage();
+                  }
+                }}
                 placeholder="Type your message..."
-                className="flex-1 p-3 rounded-xl bg-chat-input text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/50"
-                disabled={isTyping}
+                className="flex-grow p-2 border rounded-l focus:outline-none focus:border-blue-500 bg-gray-50 text-gray-900"
+                style={{ zIndex: 52 }}
               />
               <button
                 type="submit"
-                disabled={isTyping || !inputMessage.trim()}
-                className="p-3 bg-primary text-white rounded-xl hover:bg-primary/90 disabled:opacity-50 disabled:hover:bg-primary transition-colors"
+                className="px-4 py-2 bg-blue-600 text-white rounded-r hover:bg-blue-700 focus:outline-none transition-colors duration-200"
+                style={{ zIndex: 52 }}
               >
-                <FiSend size={20} />
+                <FiSend />
               </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      ) : (
+      )}
+      {!isOpen && (
         <button
           onClick={toggleChat}
           className="p-4 bg-primary hover:bg-primary/90 text-white rounded-full shadow-lg transition-colors"
