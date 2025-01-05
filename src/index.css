@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --primary: #4973ff;
+  --secondary: #ea3c;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -14,12 +16,27 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  @apply bg-gray-900;
+  overflow-x: hidden;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #0a0a0a;
   color: #ffffff;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.expertise-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 a {
@@ -65,5 +82,17 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(73, 115, 255, 0.5),
+                 0 0 20px rgba(73, 115, 255, 0.3),
+                 0 0 30px rgba(73, 115, 255, 0.2);
   }
 }

@@ -10,28 +10,28 @@ const projects = [
     category: "Intelligence Artificielle",
     image: "/project1.jpg",
     technologies: ["Python", "TensorFlow", "React"],
-    duration: "6 semaines",
-    results: ["Augmentation des ventes de 25%", "Amélioration de l'engagement utilisateur"]
+    duration: "en cours",
+    results: ["Augmentation des ventes de 25% ?", "Amélioration de l'engagement utilisateur ?"]
   },
   {
     id: 2,
-    title: "MVP Application Mobile",
+    title: "MVP Application Mobile / Web",
     description: "Application de gestion de tâches avec fonctionnalités IA",
     category: "MVP/POC",
     image: "/project2.jpg",
     technologies: ["React Native", "Node.js", "OpenAI"],
-    duration: "4 semaines",
-    results: ["Validation du concept", "Levée de fonds réussie"]
+    duration: "20 semaines",
+    results: ["Validation du concept", "Levée de fonds réussie","mise en prod de l'application"]
   },
   {
     id: 3,
     title: "Estimation Immobilière",
     description: "Application d'estimation immobilière basée sur les données gouvernementales françaises",
-    category: "Intelligence Artificielle",
+    category: "Application web",
     image: "/project3.jpg",
-    technologies: ["JavaScript", "Data Processing", "CSV"],
-    duration: "8 semaines",
-    results: ["Augmentation de la précision des estimations de 30%", "Réduction des coûts de 20%"]
+    technologies: ["JavaScript", "Data Processing", "CSV", "HightCharts"],
+    duration: "6 semaines",
+    results: ["Augmentation de la précision des estimations de 30%", "Réduction des coûts de 80%"]
   },
   {
     id: 4,
@@ -40,8 +40,8 @@ const projects = [
     category: "MVP/POC",
     image: "/project4.jpg",
     technologies: ["Python", "Image Processing", "AI"],
-    duration: "6 semaines",
-    results: ["Création de mosaïques de haute qualité", "Amélioration de la vitesse de traitement"]
+    duration: "1 jour",
+    results: ["Création de mosaïques de haute qualité", "Amélioration de la vitesse de traitement", "creation d'une personalite artistique pour la generation"]
   },
   {
     id: 5,
@@ -49,9 +49,9 @@ const projects = [
     description: "Plateforme éducative interactive avec génération de contenu par IA",
     category: "Intelligence Artificielle",
     image: "/project5.jpg",
-    technologies: ["Python", "n8n", "AI"],
-    duration: "12 semaines",
-    results: ["Augmentation de l'engagement des étudiants de 40%", "Amélioration de la qualité du contenu"]
+    technologies: ["Python", "n8n", "AI", "JavaScript", "generation de voix et video"],
+    duration: "4 semaines",
+    results: ["App permettant de creer des courtes videos de cours a la demande", "plusieurs modeles de classes par type de professeur"]
   },
   {
     id: 6,
@@ -59,9 +59,9 @@ const projects = [
     description: "Application de gestion de recettes et courses intelligente",
     category: "MVP/POC",
     image: "/project6.jpg",
-    technologies: ["Angular", "Ionic", "TypeScript"],
-    duration: "8 semaines",
-    results: ["Augmentation de la satisfaction des utilisateurs de 30%", "Réduction des coûts de 15%"]
+    technologies: ["Angular", "Ionic", "TypeScript", "Android Studio"],
+    duration: "12 semaines",
+    results: ["creation de liste automatisee", "Réduction du gaspillage", "amelioration de la qualite de l'alimentation"]
   },
   {
     id: 7,
@@ -69,19 +69,19 @@ const projects = [
     description: "Application Galaxy Watch pour le suivi des cryptomonnaies",
     category: "MVP/POC",
     image: "/project7.jpg",
-    technologies: ["Java", "Kotlin", "Watch Faces"],
-    duration: "6 semaines",
-    results: ["Création d'une application de suivi des cryptomonnaies", "Amélioration de la vitesse de mise à jour"]
+    technologies: ["Java", "Kotlin", "Watch Faces", "Android Studio"],
+    duration: "2 jours",
+    results: ["Création d'une application de suivi des cryptomonnaies", "affichage de simple graffique sur la montre"]
   },
   {
     id: 8,
     title: "TradeBroFamily",
     description: "Application web de trading avec visualisation avancée",
-    category: "Intelligence Artificielle",
+    category: "Application web",
     image: "/project8.jpg",
     technologies: ["JavaScript", "TradingView API", "Technical Analysis"],
-    duration: "12 semaines",
-    results: ["Augmentation de la précision des prévisions de 25%", "Amélioration de la vitesse de traitement"]
+    duration: "2 jours",
+    results: ["Augmentation de la précision des prévisions de 25%", "simplification de la prise de decision"]
   }
 ];
 
