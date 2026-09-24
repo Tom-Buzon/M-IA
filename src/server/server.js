@@ -1,336 +1,160 @@
 import express from 'express';
-import cors from 'cors';
+import { readFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+import { once } from 'node:events';
+import { readSSE } from '../lib/sse.js';
 
-const app = express();
-const PORT = 3001;
+const root = fileURLToPath(new URL('../../', import.meta.url));
 
-app.use(cors({
-  origin: 'http://localhost:5173',
-  methods: ['GET', 'POST'],
-  credentials: true
-}));
-
-app.use(express.json());
-
-let chatStarted = false;
-let conversationHistory = [];
-
-const SYSTEM_PROMPT = `
-- Use Emojis
-You are an expert in online sales and customer engagement. You represent M-IA, an agency specialising in the development and integration of custom artificial intelligence solutions.
-
-Your primary goal is to engage customers on any topic they bring up, but you must skilfully guide the conversation back to M-IA and its offerings. Aim to secure a contract or schedule a meeting with the client by showcasing the value and benefits of M-IA's services.
-
-About Us:
-M-IA provides tailored AI solutions for businesses of all sizes, including:
-
-MVP/POC Development:
-- Rapid prototyping of AI solutions.
-- Validation of innovative concepts.
-- Feasibility demonstrations and agile testing.
-
-Custom AI Solutions:
-- Smart chatbots and virtual assistants.
-- Predictive analytics and business intelligence.
-- Natural Language Processing (NLP) solutions.
-
-Consulting and Support:
-- AI needs assessment and strategy development.
-- Ongoing technical support and training.
-
-What Makes Us Different?
-- Cutting-edge AI expertise.
-- Personalised, business-oriented solutions.
-- Proven track record of innovation and performance.
-
-Your tone should be professional yet approachable. Always focus on the client's needs and demonstrate how M-IA can solve their challenges. Use examples of our successful projects to build credibility, and ensure the client feels confident in choosing M-IA as their AI partner.
-
-Goals:
-1. Address the client's initial question or topic.
-2. Gradually introduce M-IA's expertise and relevant offerings.
-3. Close the conversation by proposing a next step: booking a meeting, sending a proposal, or exploring a tailored solution.
-4. Use Emojis
-
-We can develop n8n, javascript, node, python, typescript, angular, react, view, android studio 
-NEVER LIE
-BE SHORT IN YOUR ANSWER
-Don't ask too much technical requirement, send them to the team
-
-TECHNICAL EXPERTISE:
-We specialize in:
-- Frontend: React, Angular, Vue.js, TypeScript
-- Backend: Node.js, Python, JavaScript
-- Mobile: Android Studio
-- Automation: n8n
-- AI/ML: Custom AI Solutions, NLP, Machine Learning because we want local AI to be cheap and confidencial
-- Database: SQL, NoSQL solutions
-
-SERVICES AND PRICING STRUCTURE:
-1. MVP/POC Development (1-6 weeks):
-   - Basic MVP: €500-€15,000
-   - Features: Core functionality, basic UI, essential APIs
-   - Deliverables: Working prototype, technical documentation
-   - Price varies based on:
-     * Number of features
-     * Integration complexity
-     * Data volume
-     * need of database
-     * need of hosting
-   
-2. Custom AI Solutions (1-6 months):
-   - Chatbots: €500-€10,000
-   - Predictive Analytics: €15,000-€50,000 - Not yet available
-   - NLP Solutions: €5,000-€60,000
-   - Price varies based on:
-     * Number of features
-     * Integration complexity
-     * Data volume
-     * Training requirements
-
-3. Consulting and Support:
-   - Technical Assessment: €1,500-€3,000 / 150€hour
-   - Strategy Workshop: €3,000-€5,000
-   - Ongoing Support: €2,000-€5,000/month
-
-   PORTFOLIO AND CASE STUDIES:
-
-
-
-2. Mobile/Web MVP Task Management
-   - Solution: AI-powered task management application
-   - Technologies: React Native, Node.js, OpenAI
-   - Results: Successful concept validation, funding secured, production deployment
-   - Duration: 20 weeks
-   - Budget Range: €8,000-€15,000
-
-3. Real Estate Valuation System
-   - Solution: Data-driven property valuation platform
-   - Technologies: JavaScript, Data Processing, CSV, HighCharts
-   - Results: 30% increase in estimation accuracy, 80% cost reduction
-   - Duration: 6 weeks
-   - Budget Range: €500-€2,000
-
-4. AI Art Generation (Mosaic Generator)
-   - Solution: Local AI image processing system
-   - Technologies: Python, Image Processing, AI
-   - Results: High-quality mosaic creation, improved processing speed
-   - Duration: 1 day
-   - Budget Range: €500-€1,500
-
-5. TeachMeAnything Educational Platform
-   - Solution: AI-powered interactive learning platform
-   - Technologies: Python, n8n, AI, JavaScript, Voice/Video Generation
-   - Results: On-demand course video creation, multiple teacher models
-   - Duration: 4 weeks
-   - Budget Range: €5,000-€12,000
-
-6. Smart Recipe Management App
-   - Solution: AI-powered recipe and grocery management
-   - Technologies: Angular, Ionic, TypeScript, Android Studio
-   - Results: Automated list creation, waste reduction
-   - Duration: 12 weeks
-   - Budget Range: €20,000-€30,000
-
-7. Crypto Watch Application
-   - Solution: Galaxy Watch cryptocurrency tracker
-   - Technologies: Java, Kotlin, Watch Faces, Android Studio
-   - Results: Real-time crypto tracking, watch face integration
-   - Duration: 2 days
-   - Budget Range: €1,000-€2,000
-
-8. Trading Visualization Platform
-   - Solution: Advanced trading visualization web app
-   - Technologies: JavaScript, TradingView API
-   - Results: 25% increase in forecast accuracy
-   - Duration: 2 days
-   - Budget Range: €1,500-€3,000
-
-
-ENGAGEMENT PROCESS:
-1. Initial Consultation (1h Free for MVP)
-2. Technical Assessment (1-2 weeks)
-3. Proposal & Pricing (3-5 business days)
-4. Development & Implementation
-5. Support & Maintenance
-
-CONVERSATION GUIDELINES:
-- Use Emojis
-1. Keep responses concise and clear
-2. Focus on business value over technical details
-3. Direct technical questions to the development team
-4. Never make false promises or claims
-5. Always propose next steps (meeting, assessment, or proposal)
-
-PRICING GUIDELINES:
-- Provide rough estimates based on similar past projects
-- Explain that final pricing depends on detailed requirements
-- Highlight value proposition and ROI potential
-- Mention that custom quotes are available after technical assessment
-
-
-CALL TO ACTION:
-Always end with one of these:
-1. Schedule a free consultation
-2. Book a technical assessment
-3. Request a custom proposal
-4. Set up a discovery meeting
-
-Remember: BE CONCISE, NEVER LIE, and focus on BUSINESS VALUE. Direct detailed technical questions to our development team.`;
-
-const MODEL_NAME = 'deepseek-coder-v2:16b';
-
-// Endpoint pour obtenir le nom du modèle
-app.get('/api/model', (req, res) => {
-  res.json({ model: MODEL_NAME });
-});
-
-// Endpoint pour réinitialiser le chat
-app.post('/api/chat/reset', (req, res) => {
-  chatStarted = false;
-  conversationHistory = [];
-  res.json({ success: true });
-});
-
-// Endpoint pour démarrer le chat
-app.post('/api/chat/start', async (req, res) => {
-  try {
-    if (chatStarted && !req.body.force) {
-      return res.json({ success: true, alreadyStarted: true });
+export function createApp({ apiKey = process.env.openrouterToken || process.env.OPENROUTER_API_KEY,
+  model = process.env.model || process.env.OPENROUTER_MODEL || 'qwen/qwen3.8-27b:free',
+  fallbackModel = process.env.OPENROUTER_FALLBACK_MODEL ?? 'nvidia/nemotron-3.5-lightning:free',
+  fetchImpl = fetch, personaPath = path.join(root, 'persona.md'), timeoutMs = 120_000, firstTokenMs = 30_000,
+  rateLimit = 15 } = {}) {
+  const app = express();
+  const visitors = new Map();
+  app.disable('x-powered-by');
+  app.use((_req, res, next) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    next();
+  });
+  app.use(express.json({ limit: '48kb' }));
+  app.get('/api/model', (_req, res) => res.json({ model, fallbackModel, configured: Boolean(apiKey) }));
+  app.post('/api/chat/message', async (req, res) => {
+    if (req.get('sec-fetch-site') === 'cross-site' ||
+        (process.env.APP_ORIGIN && req.get('origin') && req.get('origin') !== process.env.APP_ORIGIN)) {
+      return res.status(403).json({ error: 'Origine non autorisée.' });
     }
-
-    const response = await fetch('http://localhost:11434/api/generate', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: MODEL_NAME,
-        prompt: 'Hello',
-        system: SYSTEM_PROMPT,
-        stream: false
-      }),
-    });
-
-    if (!response.ok) {
-      throw new Error('Ollama is not available');
+    const messages = req.body?.messages;
+    if (!Array.isArray(messages) || messages.length < 1 || messages.length > 21 ||
+      messages.some((m, i) => !m || m.role !== (i % 2 === 0 ? 'user' : 'assistant') ||
+        typeof m.content !== 'string' || !m.content.trim() || m.content.length > 6000) ||
+      messages.at(-1).role !== 'user' || messages.reduce((sum, m) => sum + m.content.length, 0) > 32000) {
+      return res.status(400).json({ error: 'Conversation invalide ou trop longue. Commencez une nouvelle discussion.' });
     }
-
-    chatStarted = true;
-    res.json({ success: true });
-  } catch (error) {
-    console.error('Error starting chat:', error);
-    res.status(500).json({ error: 'Failed to start chat. Make sure Ollama is running.' });
-  }
-});
-
-// Endpoint principal pour la conversation
-app.post('/api/chat/message', async (req, res) => {
-  try {
-    if (!chatStarted) {
-      return res.status(400).json({ error: 'Chat not started' });
+    if (!apiKey) return res.status(503).json({ error: 'Le conseiller est en cours de configuration. Contactez Tom par email.' });
+    const now = Date.now();
+    for (const [key, value] of visitors) if (value.until <= now && !value.active) visitors.delete(key);
+    const visitor = visitors.get(req.ip) || { count: 0, active: 0, until: now + 60_000 };
+    if (visitor.until <= now) { visitor.count = 0; visitor.until = now + 60_000; }
+    if (visitor.count >= rateLimit || visitor.active >= 2 || visitors.size > 10000) {
+      res.setHeader('Retry-After', '60');
+      return res.status(429).json({ error: 'Trop de demandes. Réessayez dans une minute.', code: 'SITE_RATE_LIMIT', status: 429, retryAfter: 60 });
     }
-
-    const { message } = req.body;
-    console.log('Sending message:', message);
-
-    // Construire le prompt avec l'historique
-    const fullPrompt = conversationHistory.length > 0
-      ? conversationHistory.join('\n') + '\nUser: ' + message
-      : message;
-
-    res.setHeader('Content-Type', 'text/event-stream');
-    res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('Connection', 'keep-alive');
-
-    let currentResponse = '';
-
+    visitor.count++; visitor.active++; visitors.set(req.ip, visitor);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), timeoutMs);
+    const disconnect = () => controller.abort();
+    res.on('close', disconnect);
+    const send = async data => {
+      if (res.destroyed) throw new Error('Disconnected');
+      if (!res.write('data: ' + JSON.stringify(data) + '\n\n')) await once(res, 'drain', { signal: controller.signal });
+    };
     try {
-      const response = await fetch('http://localhost:11434/api/generate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          model: MODEL_NAME,
-          prompt: fullPrompt,
-          system: SYSTEM_PROMPT,
-          stream: true,
-          options: {
-            temperature: 0.7,
-            top_p: 0.9,
-            max_tokens: 4000,
-            num_ctx: 8192,
-            repeat_penalty: 1.1,
-            stop: ["User:", "Assistant:"],
-            num_predict: 4000
-          }
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`Ollama error: ${response.status} ${response.statusText}`);
-      }
-
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-
-      while (true) {
+      const persona = await readFile(personaPath, 'utf8');
+      const language = { fr: 'français', en: 'English', nl: 'Nederlands' }[req.body.locale] || 'français';
+      const candidates = [...new Set([model, fallbackModel].filter(Boolean))];
+      let hasContent = false;
+      for (let attempt = 0; attempt < candidates.length; attempt++) {
+        const selectedModel = candidates[attempt];
+        const canFallback = status => !hasContent && attempt + 1 < candidates.length && [404, 429, 500, 502, 503, 504].includes(status);
+        const firstToken = new AbortController();
+        const firstTokenTimer = attempt + 1 < candidates.length ? setTimeout(() => firstToken.abort(), firstTokenMs) : undefined;
         try {
-          const { value, done } = await reader.read();
-          
-          if (done) {
-            console.log('Stream complete. Final response:', currentResponse);
-            if (currentResponse.trim()) {
-              conversationHistory.push('User: ' + message);
-              conversationHistory.push('Assistant: ' + currentResponse.trim());
-              if (conversationHistory.length > 20) {
-                conversationHistory = conversationHistory.slice(-20);
-              }
-            }
-            res.write('data: [DONE]\n\n');
-            break;
+        const upstream = await fetchImpl('https://openrouter.ai/api/v1/chat/completions', {
+          method: 'POST', signal: AbortSignal.any([controller.signal, firstToken.signal]),
+          headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + apiKey, 'X-Title': 'Attic-Ai' },
+          body: JSON.stringify({ model: selectedModel, stream: true, max_tokens: 1800,
+            ...(['qwen/qwen3.8-27b:free', 'nvidia/nemotron-3.5-lightning:free'].includes(selectedModel) ? { reasoning: { enabled: false } } : {}),
+            messages: [{ role: 'system', content: 'You are the AI advisor for Attic-Ai, the studio of Tom Buzon. Answer in ' + language + '. Use that language for the entire reply. The French reference below contains facts, not a language requirement. Do not introduce yourself as the model provider unless asked about it.\n\n' + persona + '\nLangue du site : ' + language + '. Réponds dans cette langue, sauf demande explicite du visiteur.' }, ...messages.map(({ role, content }) => ({ role, content }))] }),
+        });
+        if (!upstream.ok) {
+          const diagnostics = await upstream.json().catch(() => ({}));
+          if (canFallback(upstream.status)) continue;
+          const providerName = diagnostics.error?.metadata?.provider_name;
+          const provider = typeof providerName === 'string' && /^[\w .-]{1,60}$/.test(providerName) ? providerName : undefined;
+          const retryAfter = Math.min(300, Math.max(1, Number(upstream.headers.get('retry-after')) || 30));
+          const errors = { 400: 'Le modèle configuré est invalide ou indisponible.', 401: 'La clé OpenRouter doit être vérifiée côté serveur.',
+            402: 'Le quota OpenRouter est épuisé.', 404: 'Le modèle configuré est indisponible.',
+            429: 'Le modèle gratuit est très sollicité. Réessayez dans un instant.' };
+          const diagnostic = { error: errors[upstream.status] || 'Le fournisseur IA est indisponible. Réessayez plus tard.',
+            code: 'OPENROUTER_' + upstream.status, status: upstream.status, provider, model: selectedModel,
+            attemptedModels: candidates.slice(0, attempt + 1), ...(upstream.status === 429 ? { retryAfter } : {}) };
+          if (res.headersSent) { await send(diagnostic); res.end(); }
+          else {
+            if (upstream.status === 429) res.setHeader('Retry-After', String(retryAfter));
+            res.status(upstream.status === 429 ? 429 : 502).json(diagnostic);
           }
-
-          const chunk = decoder.decode(value);
-          const lines = chunk.split('\n');
-
-          for (const line of lines) {
-            if (line.trim() === '') continue;
-            
-            try {
-              const data = JSON.parse(line);
-              if (data.response) {
-                currentResponse += data.response;
-                res.write(`data: ${JSON.stringify({ text: data.response })}\n\n`);
-              }
-              if (data.error) {
-                console.error('Ollama response error:', data.error);
-                throw new Error(data.error);
-              }
-            } catch (parseError) {
-              console.error('Error parsing line:', line, parseError);
-              continue;
-            }
-          }
-        } catch (streamError) {
-          console.error('Stream processing error:', streamError);
-          res.write(`data: ${JSON.stringify({ error: 'Stream processing error' })}\n\n`);
-          break;
+          return;
         }
+        if (!upstream.body) throw new Error('Missing stream');
+        if (!res.headersSent) {
+          res.set({ 'Content-Type': 'text/event-stream; charset=utf-8', 'Cache-Control': 'no-cache, no-transform', 'X-Accel-Buffering': 'no' });
+          res.flushHeaders();
+        }
+        await send({ model: selectedModel, fallback: attempt > 0 });
+        let done = false;
+        let retry = false;
+        for await (const data of readSSE(upstream.body)) {
+          if (data === '[DONE]') { done = true; break; }
+          const chunk = JSON.parse(data);
+          if (chunk.error || chunk.choices?.[0]?.finish_reason === 'error') {
+            const code = Number(chunk.error?.code);
+            if (canFallback(code)) { retry = true; break; }
+            const error = new Error('Provider error');
+            error.providerStatus = Number.isInteger(code) && code >= 400 && code <= 599 ? code : undefined;
+            throw error;
+          }
+          const content = chunk.choices?.[0]?.delta?.content;
+          if (typeof content === 'string' && content) {
+            clearTimeout(firstTokenTimer);
+            hasContent = true;
+            await send({ text: content });
+          }
+          if (chunk.usage && hasContent) await send({ usage: chunk.usage });
+          if (hasContent && chunk.choices?.[0]?.finish_reason === 'length') await send({ truncated: true });
+        }
+        if (retry || (!hasContent && attempt + 1 < candidates.length)) continue;
+        if (!done || !hasContent) throw new Error('Incomplete stream');
+        await send({ done: true });
+        res.end();
+        return;
+        } catch (cause) {
+          if (!controller.signal.aborted && !hasContent && attempt + 1 < candidates.length && (firstToken.signal.aborted || cause instanceof TypeError)) continue;
+          if (firstToken.signal.aborted) cause.firstTokenTimeout = true;
+          throw cause;
+        } finally { clearTimeout(firstTokenTimer); firstToken.abort(); }
       }
-    } catch (ollemaError) {
-      console.error('Ollama request error:', ollemaError);
-      res.write(`data: ${JSON.stringify({ error: 'Failed to get response from Ollama' })}\n\n`);
+    } catch (cause) {
+      if (!res.destroyed) {
+        const timedOut = controller.signal.aborted || cause.firstTokenTimeout;
+        const error = timedOut ? 'Le délai de réponse est dépassé. Réessayez.' : 'La réponse a été interrompue. Réessayez dans un instant.';
+        const diagnostic = { error, code: timedOut ? 'TIMEOUT' : 'STREAM_INTERRUPTED', ...(cause.providerStatus ? { status: cause.providerStatus, code: 'OPENROUTER_' + cause.providerStatus } : {}) };
+        if (res.headersSent) { res.write('data: ' + JSON.stringify(diagnostic) + '\n\n'); res.end(); }
+        else res.status(502).json(diagnostic);
+      }
+    } finally {
+      clearTimeout(timeout); res.off('close', disconnect); controller.abort(); visitor.active--;
     }
-
-    res.end();
-  } catch (error) {
-    console.error('Global error:', error);
-    res.write(`data: ${JSON.stringify({ error: 'An unexpected error occurred' })}\n\n`);
-    res.end();
+  });
+  app.use('/api', (_req, res) => res.status(404).json({ error: 'Route API inconnue.' }));
+  const dist = path.join(root, 'dist');
+  if (existsSync(dist)) {
+    app.use(express.static(dist));
+    app.get('/', (_req, res) => res.sendFile(path.join(dist, 'index.html')));
+    for (const page of ['agence', 'portfolio']) app.get('/' + page, (_req, res) => res.sendFile(path.join(dist, page, 'index.html')));
   }
-});
+  app.use((error, _req, res, _next) => {
+    res.status(error.status === 413 ? 413 : 400).json({ error: 'La requête est invalide ou trop volumineuse.' });
+  });
+  return app;
+}
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  if (existsSync(path.join(root, '.env'))) process.loadEnvFile(path.join(root, '.env'));
+  const port = Number(process.env.PORT) || 3001;
+  createApp().listen(port, process.env.HOST || '127.0.0.1', () => console.log('Attic-Ai : http://localhost:' + port));
+}

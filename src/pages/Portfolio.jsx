@@ -1,321 +1,57 @@
-import { motion } from 'framer-motion';
+import SpatialPassage from '../components/SpatialPassage';
+import { useLocale } from "../i18n/Locale";
 import { useState } from 'react';
-import { useInView } from 'react-intersection-observer';
-
-const projects = [
-  {
-    id: 1,
-    title: "IA de Recommandation",
-    description: "Système de recommandation basé sur l'IA pour une plateforme e-commerce",
-    category: "Intelligence Artificielle",
-    image: "/project1.jpg",
-    technologies: ["Python", "TensorFlow", "React"],
-    duration: "en cours",
-    results: ["Augmentation des ventes de 25% ?", "Amélioration de l'engagement utilisateur ?"]
-  },
-  {
-    id: 2,
-    title: "MVP Application Mobile / Web",
-    description: "Application de gestion de tâches avec fonctionnalités IA",
-    category: "MVP/POC",
-    image: "/project2.jpg",
-    technologies: ["React Native", "Node.js", "OpenAI"],
-    duration: "20 semaines",
-    results: ["Validation du concept", "Levée de fonds réussie","mise en prod de l'application"]
-  },
-  {
-    id: 3,
-    title: "Estimation Immobilière",
-    description: "Application d'estimation immobilière basée sur les données gouvernementales françaises",
-    category: "Application web",
-    image: "/project3.jpg",
-    technologies: ["JavaScript", "Data Processing", "CSV", "HightCharts"],
-    duration: "6 semaines",
-    results: ["Augmentation de la précision des estimations de 30%", "Réduction des coûts de 80%"]
-  },
-  {
-    id: 4,
-    title: "Mosaic Generator",
-    description: "Générateur d'images en mosaïque utilisant une bibliothèque locale",
-    category: "MVP/POC",
-    image: "/project4.jpg",
-    technologies: ["Python", "Image Processing", "AI"],
-    duration: "1 jour",
-    results: ["Création de mosaïques de haute qualité", "Amélioration de la vitesse de traitement", "creation d'une personalite artistique pour la generation"]
-  },
-  {
-    id: 5,
-    title: "TeachMeAnything",
-    description: "Plateforme éducative interactive avec génération de contenu par IA",
-    category: "Intelligence Artificielle",
-    image: "/project5.jpg",
-    technologies: ["Python", "n8n", "AI", "JavaScript", "generation de voix et video"],
-    duration: "4 semaines",
-    results: ["App permettant de creer des courtes videos de cours a la demande", "plusieurs modeles de classes par type de professeur"]
-  },
-  {
-    id: 6,
-    title: "UseYourFridge",
-    description: "Application de gestion de recettes et courses intelligente",
-    category: "MVP/POC",
-    image: "/project6.jpg",
-    technologies: ["Angular", "Ionic", "TypeScript", "Android Studio"],
-    duration: "12 semaines",
-    results: ["creation de liste automatisee", "Réduction du gaspillage", "amelioration de la qualite de l'alimentation"]
-  },
-  {
-    id: 7,
-    title: "Crypto Watch App",
-    description: "Application Galaxy Watch pour le suivi des cryptomonnaies",
-    category: "MVP/POC",
-    image: "/project7.jpg",
-    technologies: ["Java", "Kotlin", "Watch Faces", "Android Studio"],
-    duration: "2 jours",
-    results: ["Création d'une application de suivi des cryptomonnaies", "affichage de simple graffique sur la montre"]
-  },
-  {
-    id: 8,
-    title: "TradeBroFamily",
-    description: "Application web de trading avec visualisation avancée",
-    category: "Application web",
-    image: "/project8.jpg",
-    technologies: ["JavaScript", "TradingView API", "Technical Analysis"],
-    duration: "2 jours",
-    results: ["Augmentation de la précision des prévisions de 25%", "simplification de la prise de decision"]
-  }
-];
-
-const Portfolio = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [filter, setFilter] = useState('all');
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const item = {
-    hidden: { 
-      opacity: 0,
-      y: 20,
-      scale: 0.95
-    },
-    show: { 
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 15
-      }
-    }
-  };
-
-  const projectDetails = {
-    hidden: {
-      opacity: 0,
-      scale: 0.8,
-      y: 50
-    },
-    show: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20
-      }
-    },
-    exit: {
-      opacity: 0,
-      scale: 0.8,
-      y: 50,
-      transition: {
-        duration: 0.3
-      }
-    }
-  };
-
-  const filteredProjects = projects.filter(project => 
-    filter === 'all' || project.category.toLowerCase() === filter
-  );
-
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl font-bold mb-6">Nos Réalisations</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Découvrez nos projets de MVP et d'intégration d'IA
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center gap-4 mb-12"
-        >
-          {['all', 'mvp/poc', 'intelligence artificielle'].map((category) => (
-            <motion.button
-              key={category}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-full ${
-                filter === category
-                  ? 'bg-gradient-to-r from-primary to-secondary'
-                  : 'bg-gray-800 hover:bg-gray-700'
-              } transition-colors`}
-            >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </motion.button>
-          ))}
-        </motion.div>
-
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          ref={ref}
-        >
-          {filteredProjects.map((project) => (
-            <motion.div
-              key={project.id}
-              variants={item}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
-              className="group relative bg-gray-800 rounded-xl overflow-hidden cursor-pointer"
-              onClick={() => setSelectedProject(project)}
-            >
-              <div className="aspect-video bg-gray-700">
-                {/* Image du projet */}
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm">
-                    {project.category}
-                  </span>
-                  <span className="text-gray-400 text-sm">{project.duration}</span>
-                </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 bg-gray-700/50 rounded text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-8"
-                initial={false}
-                whileHover={{ opacity: 1 }}
-              >
-                <motion.button
-                  className="px-6 py-2 bg-primary rounded-full font-semibold"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Voir les détails
-                </motion.button>
-              </motion.div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Modal de détails du projet */}
-        {selectedProject && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedProject(null)}
-          >
-            <motion.div
-              variants={projectDetails}
-              initial="hidden"
-              animate="show"
-              exit="exit"
-              className="bg-gray-800 rounded-xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={e => e.stopPropagation()}
-            >
-              <div className="aspect-video bg-gray-700 rounded-lg mb-6">
-                {/* Image du projet */}
-              </div>
-              <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full">
-                  {selectedProject.category}
-                </span>
-                <span className="text-gray-400">{selectedProject.duration}</span>
-              </div>
-              <p className="text-gray-300 mb-6">{selectedProject.description}</p>
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-3">Technologies utilisées</h3>
-                <div className="flex flex-wrap gap-2">
-                  {selectedProject.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-gray-700 rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-3">Résultats</h3>
-                <ul className="space-y-2">
-                  {selectedProject.results.map((result, index) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-gray-300">{result}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <motion.button
-                className="mt-8 px-6 py-2 bg-gray-700 rounded-full hover:bg-gray-600 transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setSelectedProject(null)}
-              >
-                Fermer
-              </motion.button>
-            </motion.div>
-          </motion.div>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default Portfolio;
+import KnowledgeMap from '../components/KnowledgeMap';
+import { archives as sourceArchives } from '../data';
+const sourceSequence = [['00:00', 'Ouvrir', 'Installer l’atmosphère, laisser entrer la musique.'], ['00:08', 'Accélérer', 'Changer de plan sur les accents du morceau.'], ['00:16', 'Raconter', 'Articuler les scènes et les paroles horodatées.'], ['00:24', 'Résoudre', 'Conclure le mouvement, préparer le rendu.']];
+function Timeline() {
+  const {
+    t,
+    localize
+  } = useLocale();
+  const sequence = localize(sourceSequence);
+  const [active, setActive] = useState(0);
+  return <div className="film-demo"><div className="film-screen"><span>{t("FRAMEFORGE / STORYBOARD")}</span><div className={'film-art scene-' + active}><i /><i /><i /><strong>{sequence[active][1]}<small>{sequence[active][0]}</small></strong></div><p>{sequence[active][2]}</p></div><div className="waveform" aria-hidden="true">{Array.from({
+        length: 64
+      }, (_, i) => <i key={i} style={{
+        height: 10 + (i * 37 + i * i) % 58 + 'px'
+      }} />)}</div><div className="timeline-stops" role="group" aria-label={t("Explorer un storyboard illustratif")}>{sequence.map(([time, title], i) => <button key={time} aria-pressed={active === i} onClick={() => setActive(i)}><span>{time}</span>{title}</button>)}</div><p className="media-caption">{t("Principe interactif illustré · Ce storyboard n’est pas une capture de l’application.")}</p></div>;
+}
+export default function Portfolio() {
+  const {
+    t,
+    url,
+    localize
+  } = useLocale();
+  const archives = localize(sourceArchives);
+  const [filter, setFilter] = useState(t("Tout"));
+  return <>
+    <section data-scene-stop="0" className="portfolio-hero wrap"><p className="overline">{t("ATTIC-AI / TRAVAUX & EXPLORATIONS")}</p><h1>{t("Une idée en")}<br />{t("entraîne ")}<span className="outlined">{t("une autre.")}</span></h1><div className="portfolio-intro"><p>{t("Retrouver une pensée. Se repérer par le son. Donner un rythme à des images. Changer de terrain, garder la même envie : comprendre, puis construire.")}</p><span>{t("PRODUITS EN COURS")}<br />{t("PROTOTYPES & ARCHIVES")}<br />{t("PAR TOM BUZON")}</span></div><nav className="chapter-nav" aria-label={t("Chapitres du portfolio")}><a href="#mastermind"><span>01</span>{t(" La mémoire")}</a><a href="#vesper"><span>02</span>{t(" L’écoute")}</a><a href="#frameforge"><span>03</span>{t(" Le mouvement")}</a><a href="#matiere"><span>04</span>{t(" L’espace")}</a><a href="#archives"><span>05</span>{t(" Les détours")}</a></nav></section>
+    <SpatialPassage from={0.3} to={2} number="01 / 04" area="Le portfolio · Mémoire" title="Retrouver le fil." text="Mastermind relie les notes, leurs sources et les décisions. Le graphe ouvre la visite ; l’étude de cas explique ce qu’il permet réellement." target="#mastermind" label="Explorer Mastermind" beats={[
+      ['Capturer', 'Notes Markdown et documents.'], ['Relier', 'Graphe et recherche hybride.'], ['Interroger', 'RAG local, réponses reliées aux sources.'],
+    ]} />
+    <article className="project-chapter mastermind-chapter" id="mastermind" data-scene-stop="2">
+      <div className="wrap chapter-heading"><span className="index">{t("CHAPITRE 01 / ORGANISER LA PENSÉE")}</span><span>{t("PROJET PERSONNEL · EN DÉVELOPPEMENT")}</span></div>
+      <div className="wrap mastermind-layout"><div className="project-intro" data-reveal><h2>{t("Mastermind")}<span>{t("Une mémoire")}<br />{t("qui relie les idées.")}</span></h2><p className="project-question">{t("L’information existe.")}<br />{t("Mais où est son contexte ?")}</p><p>{t("Une note dans un dossier, une décision dans une conversation, une source oubliée. Mastermind part de cette fragmentation pour construire un espace de connaissance personnel, local et relié.")}</p><div className="tags"><span>{t("Desktop")}</span><span>{t("RAG local")}</span><span>{t("Graphe de connaissance")}</span></div><a className="quiet-link" href="#mastermind-details">{t("Explorer le projet ↓")}</a></div><div className="project-visual" data-parallax><KnowledgeMap /></div></div>
+      <div className="wrap project-details" id="mastermind-details"><div><h3>{t("Capturer")}</h3><p>{t("Notes Markdown, documents, images et audio. Un éditeur avec Mermaid et Excalidraw, pour garder les idées sous la forme qui leur convient.")}</p></div><div><h3>{t("Relier")}</h3><p>{t("Graphe, métadonnées, dates et liens. La recherche combine le sens et les mots pour retrouver un passage dans son contexte.")}</p></div><div><h3>{t("Interroger")}</h3><p>{t("Une IA reliée aux sources. Le RAG local avec Ollama permet d’explorer ses documents tout en gardant la maîtrise de ses fichiers.")}</p></div></div>
+      <div className="wrap case-notes"><p><strong>{t("Ce qui est construit")}</strong>{t(" · Application Electron, import documentaire, recherche hybride, vues graphe et Kanban, chaîne de réponse contextualisée.")}</p><p><strong>{t("Ce qui reste à éprouver")}</strong>{t(" · Qualité de la recherche sur des corpus variés, robustesse des imports et ergonomie au quotidien. La centralisation d’agents et de missions est une piste d’évolution.")}</p><div className="case-tech">{t("ELECTRON / NODE / PYTHON / LANGGRAPH / HNSW · QDRANT / OLLAMA")}</div></div>
+    </article>
+    <SpatialPassage from={2} to={4} number="02 / 04" area="Le portfolio · Perception" title="Se repérer autrement." text="Avec VESPER, l’information devient sonore. Une voix et des repères situés accompagnent l’exploration d’un vaisseau." target="#vesper" label="Explorer VESPER" beats={[
+      ['Terrain', 'Un prototype jouable sous Godot.'], ['Interaction', 'Navigation, voix et repères sonores.'], ['À éprouver', 'L’usage avec les publics concernés.'],
+    ]} />
+    <article className="project-chapter vesper-chapter" id="vesper" data-scene-stop="4"><div className="wrap chapter-heading"><span className="index">{t("CHAPITRE 02 / EXPLORER PAR LE SON")}</span><span>{t("GODOT · PROTOTYPE JOUABLE")}</span></div><div className="wrap split-project"><div data-reveal><h2>{t("VESPER")}<span>{t("Le silence")}<br />{t("des coursives.")}</span></h2><p>{t("Un vaisseau à explorer. Une mission à accomplir. LIA, une présence vocale qui aide à comprendre où l’on se trouve et comment avancer.")}</p><p>{t("Le guidage s’appuie sur la géométrie du niveau. L’interaction mêle navigation, voix et repères sonores, avec un parcours en français et en anglais.")}</p><div className="tags"><span>{t("Exploration audio")}</span><span>{t("IA vocale")}</span><span>{t("Interaction")}</span></div></div><figure data-parallax><img src="/images/vesper.webp" alt={t("Carte développeur de VESPER et exemple de guidage textuel de LIA à travers les coursives")} width="1100" height="760" loading="lazy" /><figcaption>{t("Capture réelle du prototype · Vue de développement du niveau.")}</figcaption></figure></div><div className="wrap project-footnote"><strong>{t("L’enjeu")}</strong><p>{t("Donner une indication située et compréhensible, plutôt qu’une réponse vocale déconnectée de l’espace. Une exploration de l’accessibilité, qui reste à valider avec les publics concernés.")}</p></div></article>
+    <SpatialPassage from={4} to={6} number="03 / 04" area="Le portfolio · Création" title="Passer du son au montage." text="FrameForge part d’un audio, organise ses temps forts et prépare une séquence vidéo. Chaque automatisation sert une intention de réalisation." target="#frameforge" label="Explorer FrameForge" beats={[
+      ['Analyser', 'Temps forts et transcription horodatée.'], ['Composer', 'Storyboard et scènes.'], ['Produire', 'Rendu vidéo avec Remotion.'],
+    ]} />
+    <article className="project-chapter frameforge-chapter" id="frameforge" data-scene-stop="6"><div className="wrap chapter-heading"><span className="index">{t("CHAPITRE 03 / CONSTRUIRE LE RYTHME")}</span><span>{t("OUTIL DESKTOP · EN DÉVELOPPEMENT")}</span></div><div className="wrap split-project"><div data-reveal><h2>{t("FrameForge")}<span>{t("De l’audio")}<br />{t("à la séquence.")}</span></h2><p>{t("Une musique donne le tempo. Le storyboard organise la narration. FrameForge Studio relie les deux pour préparer et rendre des clips.")}</p><p>{t("Analyse des temps et des accents, transcription locale horodatée, préparation des scènes et rendu vidéo : une chaîne de création qui relie l’IA à un résultat monté.")}</p><div className="tags"><span>{t("Tauri / React")}</span><span>{t("Parakeet")}</span><span>{t("Remotion")}</span></div></div><Timeline /></div><div className="wrap project-footnote"><strong>{t("L’enjeu")}</strong><p>{t("Garder une intention de réalisation tout en automatisant les opérations répétitives. Le projet travaille sur la mise en images d’un audio ; il ne prétend pas composer la musique.")}</p></div></article>
+    <SpatialPassage from={6} to={8} number="04 / 04" area="Le portfolio · Espace" title="Donner du volume à l’idée." text="Le parcours arrive à la maquette : observer les proportions, travailler les matières et vérifier un point de vue. Puis comparer avec le rendu réel du projet Blender." target="#matiere" label="Voir le travail de modélisation" beats={[
+      ['Les proportions', 'Composer un espace à l’échelle de ses usages.'],
+      ['Les matières', 'Faire dialoguer les surfaces, la lumière et les objets.'],
+      ['Le point de vue', 'Tourner autour d’une idée pour mieux la comprendre.'],
+    ]} />
+    <article className="space-chapter" id="matiere" data-scene-stop="8"><div className="space-media"><img data-parallax src="/images/blender-room.webp" alt={t("Rendu Blender d’une pièce sous les combles, avec canapé, bureau et fenêtre")} width="1600" height="1200" loading="lazy" /><span>{t("RENDU RÉEL / MODÉLISATION BLENDER")}</span></div><div className="wrap space-copy"><p className="overline">{t("CHAPITRE 04 / PASSER AU VOLUME")}</p><h2>{t("Imaginer.")}<br />{t("Modéliser.")}<br /><span className="muted">{t("Habiter l’idée.")}</span></h2><p>{t("Reconstituer un espace, travailler ses matériaux, trouver le bon point de vue. La modélisation 3D apporte une autre manière de penser les volumes et de rendre une intention visible.")}</p><div className="tags"><span>{t("Blender")}</span><span>{t("Modélisation")}</span><span>{t("Matériaux & rendu")}</span></div></div></article>
+    <section className="section wrap physical-project"><div><span className="index">{t("ET DU VOLUME À L’ACTION")}</span><h2>{t("Car AI.")}<br />{t("Quand le code")}<br />{t("rencontre le réel.")}</h2></div><div><p className="large-copy">{t("Relier vision, interprétation et mouvement sur un Raspberry Pi 4.")}</p><p>{t("Ce prototype, documenté dans le portfolio précédent, explore une boucle complète : percevoir avec une caméra, interpréter avec un modèle multimodal, puis déclencher une action physique.")}</p><p>{t("Un terrain d’expérimentation pour les interfaces entre logiciel et matériel. La sûreté, la latence et la robustesse restent des contraintes centrales avant tout usage industriel.")}</p><div className="tags"><span>{t("Raspberry Pi 4")}</span><span>{t("Vision")}</span><span>{t("Prototype IoT")}</span></div></div></section>
+    <section className="archive-section section" id="archives"><div className="wrap"><div className="archive-heading"><div><p className="overline">{t("CHAPITRE 05 / LES DÉTOURS COMPTENT")}</p><h2>{t("Le carnet")}<br />{t("d’explorations.")}</h2></div><p>{t("Les projets récents s’appuient sur ces essais. Applications, data, génération et outils : des archives pour montrer le chemin, avec leur contexte.")}</p></div><div className="archive-filters" role="group" aria-label={t("Filtrer les archives")}>{[t("Tout"), t("IA"), t("Data"), t("Applications"), t("Création")].map(f => <button key={f} aria-pressed={filter === f} onClick={() => setFilter(f)}>{f}</button>)}</div><div className="archive-list">{archives.filter(p => filter === t("Tout") || p[1] === filter).map(([title, category, desc, tech, note]) => <details key={title}><summary><span>{category}</span><h3>{title}</h3><span className="archive-tech">{tech}</span><b>+</b></summary><div className="archive-detail"><p>{desc}</p><p>{note}</p><small>{tech}</small></div></details>)}</div></div></section>
+    <section className="contact-finale"><div className="wrap"><p className="overline">{t("VOTRE PROJET A PEUT-ÊTRE SA PLACE DANS CETTE HISTOIRE")}</p><h2>{t("Un autre terrain")}<br />{t("à explorer ?")}</h2><a className="button button-dark" href={url("/agence/#brief")}>{t("Parlons de votre projet ")}<span>↗</span></a></div></section>
+  </>;
+}

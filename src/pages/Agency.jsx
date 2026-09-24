@@ -1,551 +1,101 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-const services = [
-  {
-    id: 1,
-    title: "MVP / POC",
-    description: "Transformez rapidement votre idée en prototype fonctionnel",
-    icon: "🚀",
-    featured: true,
-    steps: [
-      "Analyse et cadrage du projet",
-      "Design UX/UI et maquettes / integration de votre maquette",
-      "Développement du prototype",
-      "Tests et validation",
-      "Déploiement et feedback"
-    ],
-    benefits: [
-      "Validation rapide de votre concept",
-      "Réduction des risques et coûts",
-      "Feedback utilisateur précoce",
-      "Itérations agiles"
-    ],
-    timeframe: "1-4 semaines",
-    priceRange: "500€ - 4000€ / nombre de features",
-    deliverables: [
-      "Prototype fonctionnel",
-      "Documentation technique",
-      "Guide d'utilisation",
-      "Code source",
-      "Rapport de tests"
-    ]
-  },
-  {
-    id: 2,
-    title: "Conseil",
-    description: "Expertise technique et stratégique pour vos projets",
-    icon: "💡",
-    steps: [
-      "Audit de l'existant",
-      "Analyse des besoins",
-      "Recommandations techniques",
-      "Plan d'action",
-      "Suivi et ajustements"
-    ],
-    benefits: [
-      "Expertise pointue",
-      "Vision objective",
-      "Optimisation des coûts",
-      "Stratégie sur mesure"
-    ],
-    timeframe: "1-4 semaines",
-    priceRange: "150€/heure",
-    deliverables: [
-      "Rapport d'audit",
-      "Recommandations détaillées",
-      "Plan d'action",
-      "Support stratégique"
-    ]
-  },
-  {
-    id: 3,
-    title: "Chatbot Personnalisé",
-    description: "Création de chatbots intelligents adaptés à vos besoins",
-    icon: "🤖",
-    comingSoon: true,
-    steps: [
-      "Définition des use-cases",
-      "Sélection du modèle d'IA",
-      "Personnalisation du modèle",
-      "Intégration technique",
-      "Tests et optimisation"
-    ],
-    benefits: [
-      "Automatisation du support",
-      "Disponibilité 24/7",
-      "Personnalisation avancée",
-      "Évolutivité"
-    ],
-    timeframe: "1-2 semaines",
-    priceRange: "500€ - 2000€",
-    deliverables: [
-      "Chatbot opérationnel",
-      "Interface d'administration",
-      "Documentation d'utilisation",
-      "Support technique"
-    ]
-  },
-  {
-    id: 4,
-    title: "SEO",
-    description: "Optimisation de votre visibilité en ligne",
-    icon: "📈",
-    steps: [
-      "Audit SEO complet",
-      "Analyse des mots-clés",
-      "Optimisation technique",
-      "Création de contenu",
-      "Suivi des performances"
-    ],
-    benefits: [
-      "Meilleur classement Google",
-      "Trafic organique qualifié",
-      "ROI mesurable",
-      "Visibilité durable"
-    ],
-    timeframe: "1-2 mois",
-    priceRange: "800€ - 2500€/mois",
-    deliverables: [
-      "Rapport d'audit SEO",
-      "Plan d'optimisation",
-      "Rapports mensuels",
-      "Recommandations continues"
-    ]
-  },
-  {
-    id: 5,
-    title: "Application Complète",
-    description: "Développement complet de votre application de A à Z",
-    icon: "💻",
-    steps: [
-      "Analyse approfondie des besoins",
-      "Architecture technique",
-      "Design UX/UI complet",
-      "Développement full-stack",
-      "Tests et optimisation",
-      "Déploiement et maintenance"
-    ],
-    benefits: [
-      "Solution sur mesure",
-      "Architecture évolutive",
-      "Support technique complet",
-      "Formation utilisateur"
-    ],
-    timeframe: "3-6 mois",
-    priceRange: "10k€ - 50k€",
-    deliverables: [
-      "Application complète",
-      "Documentation détaillée",
-      "Formation",
-      "Support technique",
-      "Plan de maintenance"
-    ]
-  },
-  {
-    id: 6,
-    title: "Data Intelligence",
-    description: "Exploitation et analyse avancée de vos données",
-    icon: "🧠",
-    comingSoon: true,
-    steps: [
-      "Audit des données",
-      "Nettoyage et structuration",
-      "Modélisation",
-      "Visualisation",
-      "Prédictions et insights"
-    ],
-    benefits: [
-      "Décisions basées sur les données",
-      "Automatisation des analyses",
-      "Tableaux de bord personnalisés",
-      "Prédictions fiables"
-    ],
-    timeframe: "2-4 mois",
-    priceRange: "10k€ - 30k€",
-    deliverables: [
-      "Pipeline de données",
-      "Dashboards",
-      "Modèles prédictifs",
-      "Documentation",
-      "Formation équipe"
-    ]
-  }
-];
-
-const Agency = () => {
+import SpatialPassage from '../components/SpatialPassage';
+import { useLocale } from "../i18n/Locale";
+import { useEffect, useRef, useState } from 'react';
+import { email, services as sourceServices } from '../data';
+function Brief() {
+  const {
+    t,
+    localize
+  } = useLocale();
+  const services = localize(sourceServices);
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState({
-    need: '',
-    projectType: '',
-    budget: '',
-    timeline: '',
+  const [values, setValues] = useState({
+    service: '',
     description: '',
-    features: [],
-    technical: {
-      platform: '',
-      integration: [],
-      security: []
-    }
+    platform: t("À définir ensemble"),
+    timeline: t("À discuter"),
+    budget: t("À cadrer"),
+    name: '',
+    contact: ''
   });
-  const [selectedService, setSelectedService] = useState(null);
-  const navigate = useNavigate();
-
-  const handleServiceSelect = (service) => {
-    if (!service.comingSoon) {
-      setSelectedService(service);
-      setStep(2);
-    }
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setStep(3);
-  };
-
-  const renderServiceCard = (service) => (
-    <motion.div
-      key={service.id}
-      className={`${
-        service.featured 
-          ? 'col-span-full bg-gradient-to-r from-primary/20 to-secondary/20' 
-          : service.comingSoon
-          ? 'bg-gray-800/30 backdrop-blur-sm'
-          : 'bg-gray-800/50'
-      } backdrop-blur-sm p-8 rounded-xl cursor-pointer hover:bg-gray-700/50 transition-all relative`}
-      whileHover={{ scale: service.comingSoon ? 1 : 1.02 }}
-      onClick={() => handleServiceSelect(service)}
-    >
-      {service.comingSoon && (
-        <motion.div 
-          className="absolute inset-0 bg-black/50 backdrop-blur-[2px] rounded-xl flex items-center justify-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <motion.div
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-bold text-xl shadow-lg"
-            animate={{
-              scale: [1, 1.05, 1],
-              opacity: [0.9, 1, 0.9],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            Coming Soon
-          </motion.div>
-        </motion.div>
-      )}
-      <div className="flex items-start gap-6">
-        <div className="text-4xl">{service.icon}</div>
-        <div className="flex-1">
-          <div className="flex items-center gap-4">
-            <h3 className="text-2xl font-bold">{service.title}</h3>
-            {service.featured && (
-              <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">
-                Service Recommandé
-              </span>
-            )}
-          </div>
-          <p className="text-gray-300 mt-2 mb-6">{service.description}</p>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="font-semibold mb-3 text-lg">Processus</h4>
-              <ul className="space-y-2">
-                {service.steps.map((step, index) => (
-                  <li key={index} className="flex items-center space-x-2 text-gray-300">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span>{step}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-3 text-lg">Bénéfices</h4>
-              <ul className="space-y-2">
-                {service.benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-2 text-gray-300">
-                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-6 grid md:grid-cols-2 gap-4">
-            <div className="bg-gray-900/50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Délai Typique</h4>
-              <p className="text-gray-300">{service.timeframe}</p>
-            </div>
-            <div className="bg-gray-900/50 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Budget Indicatif</h4>
-              <p className="text-gray-300">{service.priceRange}</p>
-            </div>
-          </div>
-
-          {service.featured && (
-            <div className="mt-6">
-              <h4 className="font-semibold mb-3 text-lg">Livrables</h4>
-              <div className="grid md:grid-cols-2 gap-3">
-                {service.deliverables.map((deliverable, index) => (
-                  <div key={index} className="bg-gray-900/50 p-3 rounded-lg text-gray-300">
-                    {deliverable}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-    </motion.div>
-  );
-
-  const renderStep = () => {
-    switch(step) {
-      case 1:
-        return (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="grid grid-cols-1 gap-8"
-          >
-            {services.map((service) => renderServiceCard(service))}
-          </motion.div>
-        );
-
-      case 2:
-        return (
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="max-w-3xl mx-auto"
-          >
-            <form onSubmit={handleFormSubmit} className="space-y-8">
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">Informations Générales</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300">Plateforme</label>
-                    <select
-                      value={formData.technical.platform}
-                      onChange={(e) => setFormData({
-                        ...formData,
-                        technical: { ...formData.technical, platform: e.target.value }
-                      })}
-                      className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white py-2 px-3"
-                      required
-                    >
-                      <option value="">Sélectionnez...</option>
-                      <option value="web">Application Web</option>
-                      <option value="mobile">Application Mobile</option>
-                      <option value="desktop">Application Desktop</option>
-                      <option value="all">Multi-plateforme</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300">Budget</label>
-                    <select
-                      value={formData.budget}
-                      onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                      className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white py-2 px-3"
-                      required
-                    >
-                      <option value="">Sélectionnez...</option>
-                      <option value="small">{"< 10k€"}</option>
-                      <option value="medium">10k€ - 30k€</option>
-                      <option value="large">{"> 30k€"}</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300">Délai Souhaité</label>
-                    <select
-                      value={formData.timeline}
-                      onChange={(e) => setFormData({...formData, timeline: e.target.value})}
-                      className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white py-2 px-3"
-                      required
-                    >
-                      <option value="">Sélectionnez...</option>
-                      <option value="urgent">{"< 1 mois"}</option>
-                      <option value="normal">1-3 mois</option>
-                      <option value="flexible">{"> 3 mois"}</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">Description du Projet</h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300">Description Détaillée</label>
-                    <textarea
-                      value={formData.description}
-                      onChange={(e) => setFormData({...formData, description: e.target.value})}
-                      rows={4}
-                      className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white py-2 px-3"
-                      placeholder="Décrivez votre projet, ses objectifs, et vos attentes..."
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Fonctionnalités Clés</label>
-                    <div className="space-y-2">
-                      {['Authentication', 'API Integration', 'Real-time Updates', 'Data Analytics', 'Payment Processing'].map((feature) => (
-                        <label key={feature} className="flex items-center space-x-2">
-                          <input
-                            type="checkbox"
-                            checked={formData.features.includes(feature)}
-                            onChange={(e) => {
-                              const updatedFeatures = e.target.checked
-                                ? [...formData.features, feature]
-                                : formData.features.filter(f => f !== feature);
-                              setFormData({...formData, features: updatedFeatures});
-                            }}
-                            className="rounded bg-gray-700 border-gray-600 text-primary focus:ring-primary"
-                          />
-                          <span className="text-gray-300">{feature}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex justify-between">
-                <button
-                  type="button"
-                  onClick={() => setStep(1)}
-                  className="px-4 py-2 border border-gray-600 rounded-md hover:bg-gray-700 transition-colors"
-                >
-                  Retour
-                </button>
-                <button
-                  type="submit"
-                  className="px-6 py-2 bg-primary text-white rounded-md hover:bg-primary/80 transition-colors"
-                >
-                  Générer une Proposition
-                </button>
-              </div>
-            </form>
-          </motion.div>
-        );
-
-      case 3:
-        return (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-6">Proposition Personnalisée</h3>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="space-y-6">
-                  <div className="p-4 bg-gray-700/50 rounded-lg">
-                    <h4 className="font-semibold mb-3">Étapes du Projet</h4>
-                    <ul className="space-y-2">
-                      {selectedService?.steps.map((step, index) => (
-                        <li key={index} className="flex items-center space-x-2 text-gray-300">
-                          <span className="w-6 h-6 rounded-full bg-primary/20 text-primary flex items-center justify-center text-sm">
-                            {index + 1}
-                          </span>
-                          <span>{step}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="p-4 bg-gray-700/50 rounded-lg">
-                    <h4 className="font-semibold mb-3">Livrables</h4>
-                    <ul className="space-y-2">
-                      {selectedService?.deliverables.map((deliverable, index) => (
-                        <li key={index} className="flex items-center space-x-2 text-gray-300">
-                          <span className="text-primary">✓</span>
-                          <span>{deliverable}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="p-4 bg-gray-700/50 rounded-lg">
-                    <h4 className="font-semibold mb-3">Estimation</h4>
-                    <div className="space-y-2 text-gray-300">
-                      <p>
-                        <span className="font-medium">Durée estimée:</span>{' '}
-                        {formData.timeline === 'urgent' ? '2-4 semaines' : 
-                         formData.timeline === 'normal' ? '6-12 semaines' : 
-                         '12+ semaines'}
-                      </p>
-                      <p>
-                        <span className="font-medium">Budget indicatif:</span>{' '}
-                        {selectedService?.priceRange}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="p-4 bg-gray-700/50 rounded-lg">
-                    <h4 className="font-semibold mb-3">Fonctionnalités Sélectionnées</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {formData.features.map((feature, index) => (
-                        <div key={index} className="flex items-center space-x-2 text-gray-300">
-                          <span className="text-secondary">•</span>
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center space-y-4">
-                <button
-                  onClick={() => window.location.href = "mailto:contact@m-ia.com?subject=Nouveau Projet"}
-                  className="px-8 py-3 bg-primary text-white rounded-md hover:bg-primary/80 transition-colors w-full md:w-auto"
-                >
-                  Planifier un Appel de Consultation
-                </button>
-                <p className="text-gray-400 text-sm">
-                  Nous vous répondrons dans les 24 heures pour organiser un appel et discuter des détails
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        );
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-white pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-4xl font-bold mb-4">Agence</h1>
-          <p className="text-xl text-gray-300">
-            {step === 1 ? "Choisissez votre service" :
-             step === 2 ? "Détaillez votre projet" :
-             "Votre proposition personnalisée"}
-          </p>
-        </motion.div>
-
-        {renderStep()}
-      </div>
-    </div>
-  );
-};
-
-export default Agency;
+  const [notice, setNotice] = useState('');
+  const formRef = useRef(null);
+  const previousStep = useRef(1);
+  useEffect(() => {
+    if (previousStep.current === step) return;
+    previousStep.current = step;
+    formRef.current?.focus({
+      preventScroll: true
+    });
+    formRef.current?.scrollIntoView({
+      block: 'start',
+      behavior: 'instant'
+    });
+  }, [step]);
+  const field = key => ({
+    value: values[key],
+    onChange: e => setValues({
+      ...values,
+      [key]: e.target.value
+    })
+  });
+  const selected = services.find(s => s.id === values.service);
+  const summary = t("Bonjour Tom,\n\nJe souhaite échanger avec Attic-Ai.\n\nBesoin : ") + (selected?.title || t("À préciser ensemble")) + t("\nContexte : ") + values.description + t("\nSupport : ") + values.platform + t("\nÉchéance : ") + values.timeline + t("\nBudget : ") + values.budget + '\n\n' + values.name + '\n' + values.contact;
+  return <section className="brief-section section" id="brief" data-scene-stop="5"><div className="wrap brief-layout">
+    <div><p className="overline">{t("PARLONS DE VOTRE PROJET")}</p><h2>{t("Le premier pas,")}<br />{t("c’est le contexte.")}</h2><p>{t("Un brief court pour préparer notre échange. Aucun compte à créer.")}</p><a className="quiet-link" href={'mailto:' + email}>{t("Ou écrivez-moi directement ↗")}</a><div className="brief-note"><span>{t("ET ENSUITE ?")}</span><p>{t("On clarifie votre besoin, puis je vous propose un périmètre et les prochaines étapes. Aucun devis automatique.")}</p></div></div>
+    <div className="brief-form" ref={formRef} tabIndex={-1}><ol className="step-indicator" aria-label={t("Étapes du brief")}>{[t("Votre besoin"), t("Le contexte"), t("Récapitulatif")].map((label, i) => <li key={label} aria-current={step === i + 1 ? 'step' : undefined}><span>{i + 1}</span>{label}</li>)}</ol>
+    <form onSubmit={e => {
+          e.preventDefault();
+          setNotice('');
+          setStep(step + 1);
+        }}>
+      {step === 1 && <fieldset><legend>{t("Qu’aimeriez-vous faire avancer ?")}</legend><div className="service-options">{services.map(s => <label key={s.id}><input type="radio" name="service" value={s.id} checked={values.service === s.id} onChange={e => setValues({
+                  ...values,
+                  service: e.target.value
+                })} /><span>{s.title}</span></label>)}<label><input type="radio" name="service" value="" checked={!values.service} onChange={() => setValues({
+                  ...values,
+                  service: ''
+                })} /><span>{t("J’ai besoin d’en parler")}</span></label></div><button className="button button-dark" type="submit">{t("Continuer ")}<span>→</span></button></fieldset>}
+      {step === 2 && <fieldset><legend>{t("Racontez-nous la situation.")}</legend><label className="field">{t("Votre besoin et les utilisateurs concernés ")}<textarea required minLength={10} maxLength={1800} rows={4} placeholder={t("Aujourd’hui, nous… Nous aimerions pouvoir…")} {...field('description')} /></label>
+        <div className="form-row"><label className="field">{t("Support envisagé")}<select {...field('platform')}>{[t("À définir ensemble"), t("Web"), t("Mobile"), t("Desktop"), t("Intégration à un outil existant"), t("Expérience / objet connecté")].map(v => <option key={v}>{v}</option>)}</select></label><label className="field">{t("Échéance")}<select {...field('timeline')}>{[t("À discuter"), t("Dès que possible"), t("Dans les 3 prochains mois"), t("Plus tard / exploration")].map(v => <option key={v}>{v}</option>)}</select></label></div>
+        <label className="field">{t("Enveloppe ou contrainte budgétaire (facultatif)")}<input maxLength={120} placeholder={t("À cadrer")} {...field('budget')} /></label>
+        <div className="form-row"><label className="field">{t("Votre nom")}<input autoComplete="name" maxLength={100} {...field('name')} /></label><label className="field">{t("Email de retour (facultatif)")}<input type="email" autoComplete="email" maxLength={160} {...field('contact')} /></label></div>
+        <div className="actions"><button className="quiet-link" type="button" onClick={() => setStep(1)}>{t("← Retour")}</button><button className="button button-dark" type="submit">{t("Préparer le brief ")}<span>→</span></button></div>
+      </fieldset>}
+    </form>
+    {step === 3 && <div className="brief-review"><h3>{t("Votre point de départ")}</h3><dl><div><dt>{t("Besoin")}</dt><dd>{selected?.title || t("À préciser ensemble")}</dd></div><div><dt>{t("Contexte")}</dt><dd>{values.description}</dd></div><div><dt>{t("Support · échéance")}</dt><dd>{values.platform} · {values.timeline}</dd></div><div><dt>{t("Enveloppe")}</dt><dd>{values.budget || t("À cadrer")}</dd></div></dl>{selected && <p><strong>{t("Premiers livrables à discuter :")}</strong> {selected.deliverables.join(', ')}.</p>}<a className="button button-dark" href={'mailto:' + email + '?subject=' + encodeURIComponent(t("Un projet avec Attic-Ai — ") + (values.name || selected?.title || t("premier échange"))) + '&body=' + encodeURIComponent(summary)}>{t("Ouvrir mon email ")}<span>↗</span></a><div className="actions"><button className="quiet-link" onClick={() => setStep(2)}>{t("← Modifier")}</button><button className="quiet-link" onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(summary);
+                setNotice(t("Brief copié. Vous pouvez le coller dans votre email."));
+              } catch {
+                setNotice(t("La copie est indisponible. Utilisez « Ouvrir mon email »."));
+              }
+            }}>{t("Copier le brief")}</button></div><p role="status">{notice}</p></div>}
+    <p className="form-privacy">{t("Ce formulaire prépare un email dans votre messagerie. Rien n’est envoyé ni enregistré par le site.")}</p></div>
+  </div></section>;
+}
+export default function Agency() {
+  const {
+    t,
+    url,
+    localize
+  } = useLocale();
+  const services = localize(sourceServices);
+  return <>
+    <section data-scene-stop="0" className="agency-hero wrap"><p className="overline">{t("ATTIC-AI / L’AGENCE")}</p><div className="agency-intro"><h1>{t("Bien cadrer.")}<br />{t("Bien construire.")}<br /><span className="muted">{t("Pouvoir reprendre.")}</span></h1><div><p className="large-copy">{t("Du conseil technique au produit utilisable, avec un interlocuteur qui garde la vue d’ensemble.")}</p><p>{t("Attic-Ai accompagne les porteurs de projet et les équipes qui veulent lancer un service, améliorer leurs outils ou explorer un usage de l’IA.")}</p><a className="button button-dark" href="#brief">{t("Discuter de votre besoin ")}<span>↗</span></a></div></div><div className="agency-principles"><span>{t("Un périmètre explicite")}</span><span>{t("Des validations concrètes")}</span><span>{t("Une livraison documentée")}</span></div></section>
+    <SpatialPassage from={0} to={3} number="01 / 03" area="Le studio" title="Avant le code, une décision." text="Autour de la table, on transforme une demande en périmètre vérifiable. L’établi vient ensuite." target="#services" label="Trouver le bon accompagnement" beats={[
+      ['Cadrer', 'Usages, contraintes et risques prioritaires.'],
+      ['Éprouver', 'Un prototype pour tester l’hypothèse centrale.'],
+      ['Transmettre', 'Code, documentation et critères de reprise.'],
+    ]} />
+    <section className="section wrap services-section" id="services" data-scene-stop="3"><div className="section-heading"><p className="overline">{t("LES DOMAINES D’INTERVENTION")}</p><h2>{t("Le bon niveau d’aide.")}<br />{t("Au bon moment.")}</h2><p>{t("Une mission peut commencer par du conseil et se prolonger par la réalisation. Chaque étape a ses livrables et ses critères de réussite.")}</p></div>
+      <div className="service-index" aria-label={t("Accès aux services")}>{services.map(s => <a key={s.id} href={'#' + s.id}>{s.title} ↓</a>)}</div>
+      {services.map((s, i) => <article className="service-detail" id={s.id} key={s.id}><div className="service-title"><span className="index">0{i + 1}</span><h3>{s.title}</h3><p>{s.lead}</p><div className="tags">{s.tags.map(t => <span key={t}>{t}</span>)}</div></div><div className="service-body"><p className="service-audience">{s.audience}</p><p>{s.work}</p><div className="service-evidence"><div><h4>{t("Ce que vous récupérez")}</h4><ul>{s.deliverables.map(d => <li key={d}>{d}</li>)}</ul></div><div><h4>{t("Ce que l’on mesure")}</h4><p>{s.kpi}</p></div></div><p className="service-limit">{s.limit}</p><a className="quiet-link" href="#brief">{t("Cadrer cette mission ↗")}</a></div></article>)}
+    </section>
+    <section className="agency-method section" id="methode" data-scene-stop="3" data-scene-to="5" data-scene-view="true"><div className="wrap"><p className="overline">{t("UNE MÉTHODE LISIBLE")}</p><h2>{t("Pas de boîte noire")}<br />{t("entre l’idée et la livraison.")}</h2><div className="delivery-steps">{[[t("Cadrer"), t("Usages, existant, contraintes et risques."), t("Un périmètre et des critères d’acceptation.")], [t("Éprouver"), t("Tester l’hypothèse la plus incertaine."), t("Un prototype et une décision de poursuivre ou d’ajuster.")], [t("Construire"), t("Développer par étapes et montrer le résultat."), t("Des versions vérifiables sur les parcours prévus.")], [t("Transmettre"), t("Déployer, documenter et organiser la reprise."), t("Le code, les accès convenus et une feuille de route.")]].map(([title, text, out], i) => <div key={title} data-reveal><span className="index">0{i + 1}</span><h3>{title}</h3><p>{text}</p><p className="step-output">{out}</p></div>)}</div></div></section>
+    <section className="section wrap measurement" id="mesures" data-scene-stop="5"><div><p className="overline">{t("LA RÉUSSITE SE DÉFINIT ENSEMBLE")}</p><h2>{t("Des mesures utiles.")}<br />{t("Pas des chiffres")}<br />{t("décoratifs.")}</h2><p>{t("Ces indicateurs sont des critères à définir au cadrage, pas des performances déjà obtenues. La mesure compare un état initial et un usage testé dans les mêmes conditions.")}</p></div><div className="metrics-table"><div><span>{t("OBJECTIF")}</span><span>{t("INDICATEUR")}</span><span>{t("COMMENT LE VÉRIFIER")}</span></div><div><strong>{t("Gagner du temps")}</strong><span>{t("Minutes par opération")}</span><span>{t("Chronométrer un scénario avant / après")}</span></div><div><strong>{t("Rendre le produit utilisable")}</strong><span>{t("Taux de complétion")}</span><span>{t("Observer des utilisateurs sur un parcours")}</span></div><div><strong>{t("Maîtriser une IA")}</strong><span>{t("Coût · latence p95 · qualité")}</span><span>{t("Évaluer un jeu de questions et ses sources")}</span></div><div><strong>{t("Fiabiliser une intégration")}</strong><span>{t("Échecs et reprises manuelles")}</span><span>{t("Suivre les journaux sur une période convenue")}</span></div></div></section>
+    <section className="tom-section section" id="tom"><div className="wrap tom-layout"><div className="tom-monogram" aria-hidden="true"><span>t.</span><small>{t("LEIDEN, NL")}<br />{t("BUILD & CONSEIL")}</small></div><div><p className="overline">{t("LA PERSONNE DERRIÈRE L’ATELIER")}</p><h2>{t("Tom Buzon.")}<br />{t("Curieux par nature,")}<br />{t("constructeur par pratique.")}</h2><p>{t("Développement web à Toulouse, contrôle de projet à l’Agence spatiale européenne, puis approfondissement du machine learning : mon parcours m’a appris à relier la technique, les contraintes et l’usage.")}</p><p>{t("Attic-Ai est mon atelier indépendant, né dans un grenier. J’y construis aussi mes propres projets. C’est une façon d’éprouver les outils, de comprendre leurs limites et de garder les mains dans le concret.")}</p><a className="quiet-link" href={url("/portfolio/")}>{t("Voir ce que cette approche produit ↗")}</a></div></div></section>
+    <Brief />
+    <section className="section wrap privacy-section" id="confidentialite"><div><p className="overline">{t("DONNÉES & CONTACT")}</p><h2>{t("Un échange clair,")}<br />{t("dès le départ.")}</h2></div><div><h3>{t("Vous gardez la main sur le premier contact.")}</h3><p>{t("Le brief reste dans votre page jusqu’à l’ouverture de votre messagerie. Vous décidez de l’envoyer à Tom Buzon : ")}<a href={'mailto:' + email}>{email}</a>.</p><h3>{t("Le conseiller est une démonstration d’IA.")}</h3><p>{t("Vos messages sont transmis à OpenRouter et au fournisseur du modèle pour générer la réponse. Le site ne conserve pas les conversations côté serveur. Évitez les données confidentielles ; les pratiques des fournisseurs restent applicables. ")}<a href="https://openrouter.ai/privacy" target="_blank" rel="noreferrer">{t("Politique OpenRouter ↗")}</a></p><p>{t("Pour une mission, les accès, l’hébergement, la confidentialité et les conditions de maintenance se définissent dans la proposition.")}</p></div></section>
+  </>;
+}

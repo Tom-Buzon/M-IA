@@ -1,0 +1,2434 @@
+{
+  "AGENCE DE BUILD & CONSEIL · LEIDEN": {
+    "en": "BUILD & CONSULTING STUDIO · LEIDEN",
+    "nl": "BOUW & ADVIESSTUDIO · LEIDEN"
+  },
+  "De l’idée": {
+    "en": "From an idea",
+    "nl": "Van een idee"
+  },
+  "au premier": {
+    "en": "to its first",
+    "nl": "naar de eerste"
+  },
+  "vrai usage.": {
+    "en": "real use.",
+    "nl": "echte toepassing."
+  },
+  "Un produit à lancer. Un outil à simplifier. Une IA à rendre utile.": {
+    "en": "A product to launch. A tool to simplify. AI to put to work.",
+    "nl": "Een product lanceren. Een tool vereenvoudigen. AI nuttig maken."
+  },
+  "Attic-Ai conçoit et construit avec vous ce qui manque.": {
+    "en": "Attic-Ai designs and builds the missing piece with you.",
+    "nl": "Attic-Ai ontwerpt en bouwt samen met jou wat nog ontbreekt."
+  },
+  "Cadrer mon projet": {
+    "en": "Scope my project",
+    "nl": "Mijn project verkennen"
+  },
+  "Découvrir l’agence": {
+    "en": "Meet the studio",
+    "nl": "Ontdek de studio"
+  },
+  "DU GRENIER AUX PROJETS QUI COMPTENT.": {
+    "en": "FROM THE ATTIC TO PROJECTS THAT MATTER.",
+    "nl": "VAN DE ZOLDER NAAR PROJECTEN DIE ERTOE DOEN."
+  },
+  "CONSEIL · PRODUIT · IA APPLIQUÉE": {
+    "en": "CONSULTING · PRODUCT · APPLIED AI",
+    "nl": "ADVIES · PRODUCT · TOEGEPASTE AI"
+  },
+  "Découvrir la suite": {
+    "en": "Explore further",
+    "nl": "Ontdek meer"
+  },
+  "LE POINT DE DÉPART": {
+    "en": "THE STARTING POINT",
+    "nl": "HET VERTREKPUNT"
+  },
+  "Vous savez ce qui bloque.": {
+    "en": "You know what’s stuck.",
+    "nl": "Je weet waar het vastloopt."
+  },
+  "Trouvons ce qui débloque.": {
+    "en": "Let’s find a way forward.",
+    "nl": "Samen vinden we de volgende stap."
+  },
+  "On commence par votre situation. La technologie vient ensuite.": {
+    "en": "We start with your situation. The technology comes next.",
+    "nl": "We beginnen bij jouw situatie. De technologie volgt daarna."
+  },
+  "01 / UNE IDÉE": {
+    "en": "01 / AN IDEA",
+    "nl": "01 / EEN IDEE"
+  },
+  "« Je veux savoir": {
+    "en": "“I want to know",
+    "nl": "“Ik wil weten"
+  },
+  "si ça peut marcher. »": {
+    "en": "if this could work.”",
+    "nl": "of dit kan werken.”"
+  },
+  "Un périmètre clair, un prototype à essayer et des retours pour décider de la suite.": {
+    "en": "A clear scope, a prototype to try and feedback to decide what comes next.",
+    "nl": "Een heldere scope, een prototype om te testen en feedback om verder te beslissen."
+  },
+  "Tester un premier usage ↗": {
+    "en": "Test a first use case ↗",
+    "nl": "Test een eerste toepassing ↗"
+  },
+  "02 / UN PRODUIT": {
+    "en": "02 / A PRODUCT",
+    "nl": "02 / EEN PRODUCT"
+  },
+  "« Il faut le construire.": {
+    "en": "“It needs building.",
+    "nl": "“Het moet gebouwd worden."
+  },
+  "Ou le faire évoluer. »": {
+    "en": "Or taking further.”",
+    "nl": "Of verder ontwikkeld.”"
+  },
+  "Une application cohérente, de l’interface aux données, jusqu’à sa mise en ligne.": {
+    "en": "A coherent application, from interface to data, all the way to launch.",
+    "nl": "Een samenhangende applicatie, van interface tot data en lancering."
+  },
+  "Construire le produit ↗": {
+    "en": "Build the product ↗",
+    "nl": "Bouw het product ↗"
+  },
+  "03 / UN FREIN": {
+    "en": "03 / A BOTTLENECK",
+    "nl": "03 / EEN KNELPUNT"
+  },
+  "« On perd trop": {
+    "en": "“We spend too much",
+    "nl": "“Dit kost ons"
+  },
+  "de temps là-dessus. »": {
+    "en": "time on this.”",
+    "nl": "te veel tijd.”"
+  },
+  "Des outils reliés, des tâches automatisées et une IA évaluée sur vos vrais besoins.": {
+    "en": "Connected tools, automated tasks and AI tested against your actual needs.",
+    "nl": "Verbonden tools, geautomatiseerde taken en AI die op jouw behoeften is getest."
+  },
+  "Simplifier le quotidien ↗": {
+    "en": "Simplify everyday work ↗",
+    "nl": "Maak dagelijks werk eenvoudiger ↗"
+  },
+  "DE LA DISCUSSION AU LIVRABLE": {
+    "en": "FROM CONVERSATION TO DELIVERY",
+    "nl": "VAN GESPREK TOT OPLEVERING"
+  },
+  "Avancer.": {
+    "en": "Move forward.",
+    "nl": "Vooruitgang."
+  },
+  "Avec quelque chose": {
+    "en": "With something",
+    "nl": "Met iets"
+  },
+  "à vérifier.": {
+    "en": "you can verify.",
+    "nl": "dat je kunt toetsen."
+  },
+  "La méthode en détail →": {
+    "en": "Explore the method →",
+    "nl": "Bekijk de werkwijze →"
+  },
+  "Comprendre le vrai besoin": {
+    "en": "Understand the real need",
+    "nl": "De echte behoefte begrijpen"
+  },
+  "Pour qui, pour quoi, avec quelles contraintes ? On définit un résultat observable et un premier périmètre.": {
+    "en": "For whom, for what, under which constraints? We define an observable outcome and an initial scope.",
+    "nl": "Voor wie, waarvoor en onder welke voorwaarden? We bepalen een meetbaar resultaat en een eerste scope."
+  },
+  "Construire, montrer, ajuster": {
+    "en": "Build, show, adjust",
+    "nl": "Bouwen, tonen, bijsturen"
+  },
+  "Des versions utilisables et des points de contrôle. Les décisions restent visibles pendant le développement.": {
+    "en": "Working versions and checkpoints. Decisions stay visible throughout development.",
+    "nl": "Werkende versies en controlemomenten. Beslissingen blijven tijdens de ontwikkeling inzichtelijk."
+  },
+  "Livrer et transmettre": {
+    "en": "Deliver and hand over",
+    "nl": "Opleveren en overdragen"
+  },
+  "Le produit, son code, sa documentation et les conditions de sa reprise. La suite se décide sur ce qui a été testé.": {
+    "en": "The product, its code, its documentation and a clear handover. What comes next follows what we have tested.",
+    "nl": "Het product, de code, documentatie en een duidelijke overdracht. De volgende stap volgt uit wat we hebben getest."
+  },
+  "UN ATELIER, PLUSIEURS TERRAINS": {
+    "en": "ONE WORKSHOP, MANY FIELDS",
+    "nl": "ÉÉN WERKPLAATS, VELE TERREINEN"
+  },
+  "Le problème ne s’arrête": {
+    "en": "The problem doesn’t stop",
+    "nl": "Het probleem stopt niet"
+  },
+  "pas à une technologie.": {
+    "en": "at one technology.",
+    "nl": "bij één technologie."
+  },
+  "Nous non plus.": {
+    "en": "Neither do we.",
+    "nl": "Wij ook niet."
+  },
+  "Web, mobile & desktop": {
+    "en": "Web, mobile & desktop",
+    "nl": "Web, mobiel & desktop"
+  },
+  "IA, data & automatisation": {
+    "en": "AI, data & automation",
+    "nl": "AI, data & automatisering"
+  },
+  "3D, audio & vidéo": {
+    "en": "3D, audio & video",
+    "nl": "3D, audio & video"
+  },
+  "Interactions & objets connectés": {
+    "en": "Interactions & connected devices",
+    "nl": "Interactie & verbonden apparaten"
+  },
+  "Cette polyvalence se construit en pratiquant. Le portfolio raconte les expérimentations, les produits en cours et les liens entre ces disciplines.": {
+    "en": "This range comes from practice. The portfolio tells the story of experiments, products in progress and connections between disciplines.",
+    "nl": "Die veelzijdigheid ontstaat door te doen. Het portfolio vertelt over experimenten, producten in ontwikkeling en de verbindingen tussen disciplines."
+  },
+  "Entrer dans le portfolio": {
+    "en": "Enter the portfolio",
+    "nl": "Bekijk het portfolio"
+  },
+  "POURQUOI ATTIC-AI ?": {
+    "en": "WHY ATTIC-AI?",
+    "nl": "WAAROM ATTIC-AI?"
+  },
+  "Tout a commencé": {
+    "en": "It all started",
+    "nl": "Alles begon"
+  },
+  "dans un grenier.": {
+    "en": "in an attic.",
+    "nl": "op een zolder."
+  },
+  "Un endroit pour apprendre, bricoler, coder et pousser les idées un peu plus loin. Attic-Ai garde cet esprit d’atelier : comprendre comment les choses fonctionnent, puis les faire fonctionner ensemble.": {
+    "en": "A place to learn, tinker, code and take ideas a little further. Attic-Ai keeps that workshop spirit: understand how things work, then make them work together.",
+    "nl": "Een plek om te leren, te experimenteren, te programmeren en ideeën verder te brengen. Attic-Ai houdt die werkplaatsmentaliteit vast: begrijpen hoe dingen werken en ze vervolgens laten samenwerken."
+  },
+  "Je suis Tom Buzon. Après le développement web et le contrôle de projet à l’ESA, j’ai approfondi le machine learning. Aujourd’hui, ces expériences se rejoignent dans la conception de produits.": {
+    "en": "I’m Tom Buzon. After web development and project control at ESA, I went deeper into machine learning. Today, those experiences come together in product development.",
+    "nl": "Ik ben Tom Buzon. Na webontwikkeling en projectbeheersing bij ESA heb ik me verder verdiept in machine learning. Nu komen die ervaringen samen in productontwikkeling."
+  },
+  "Rencontrer la personne derrière l’agence →": {
+    "en": "Meet the person behind the studio →",
+    "nl": "Ontmoet de persoon achter de studio →"
+  },
+  "AVANT DE SE PARLER": {
+    "en": "BEFORE WE TALK",
+    "nl": "VOORDAT WE PRATEN"
+  },
+  "Pas besoin d’avoir": {
+    "en": "You don’t need",
+    "nl": "Je hoeft niet"
+  },
+  "toutes les réponses.": {
+    "en": "all the answers yet.",
+    "nl": "alle antwoorden te hebben."
+  },
+  "Mon idée n’est pas encore bien définie.": {
+    "en": "My idea isn’t clearly defined yet.",
+    "nl": "Mijn idee is nog niet helemaal duidelijk."
+  },
+  "C’est justement le rôle du cadrage. Décrivez le problème, les personnes concernées et ce que vous faites aujourd’hui. Nous identifierons ce qui mérite un premier test.": {
+    "en": "That is exactly what scoping is for. Describe the problem, the people involved and what you do today. We’ll identify what deserves a first test.",
+    "nl": "Daar is de verkenning juist voor. Beschrijf het probleem, de betrokkenen en hoe je nu werkt. We bepalen wat een eerste test verdient."
+  },
+  "Vous pouvez reprendre un projet existant ?": {
+    "en": "Can you take over an existing project?",
+    "nl": "Kun je een bestaand project overnemen?"
+  },
+  "Oui. On commence par examiner le code, les usages et les contraintes de reprise. Cet état des lieux permet de proposer une évolution réaliste.": {
+    "en": "Yes. We start by reviewing the code, usage and handover constraints. That gives us a basis for realistic next steps.",
+    "nl": "Ja. We bekijken eerst de code, het gebruik en de voorwaarden voor overname. Zo ontstaat een realistisch plan voor verdere ontwikkeling."
+  },
+  "Quel budget et quel délai prévoir ?": {
+    "en": "What budget and timeline should I expect?",
+    "nl": "Welk budget en welke planning zijn nodig?"
+  },
+  "Ils dépendent du périmètre, des intégrations et des risques. Vous recevez une proposition après cadrage, avec les livrables, les hypothèses et les étapes de validation.": {
+    "en": "They depend on scope, integrations and risks. After scoping, you receive a proposal with deliverables, assumptions and validation milestones.",
+    "nl": "Dat hangt af van de scope, integraties en risico’s. Na de verkenning ontvang je een voorstel met opleveringen, aannames en toetsmomenten."
+  },
+  "Faut-il absolument de l’IA ?": {
+    "en": "Does it have to involve AI?",
+    "nl": "Moet er altijd AI bij komen?"
+  },
+  "Non. Une interface plus simple ou une automatisation classique peut suffire. On compare les options selon leur utilité, leur coût et leur fiabilité.": {
+    "en": "No. A simpler interface or conventional automation may be enough. We compare options by usefulness, cost and reliability.",
+    "nl": "Nee. Een eenvoudigere interface of gewone automatisering kan voldoende zijn. We vergelijken opties op nut, kosten en betrouwbaarheid."
+  },
+  "LE PROCHAIN PROJET COMMENCE PAR UNE CONVERSATION": {
+    "en": "THE NEXT PROJECT STARTS WITH A CONVERSATION",
+    "nl": "HET VOLGENDE PROJECT BEGINT MET EEN GESPREK"
+  },
+  "Qu’est-ce qu’on": {
+    "en": "What shall we",
+    "nl": "Wat gaan we"
+  },
+  "construit ensemble ?": {
+    "en": "build together?",
+    "nl": "samen bouwen?"
+  },
+  "Parlons de votre idée": {
+    "en": "Let’s discuss your idea",
+    "nl": "Laten we je idee bespreken"
+  },
+  "Quelques lignes suffisent pour commencer.": {
+    "en": "A few lines are enough to get started.",
+    "nl": "Een paar regels zijn genoeg om te beginnen."
+  },
+  "À définir ensemble": {
+    "en": "To define together",
+    "nl": "Samen te bepalen"
+  },
+  "À discuter": {
+    "en": "To discuss",
+    "nl": "Te bespreken"
+  },
+  "À cadrer": {
+    "en": "To scope",
+    "nl": "Nog te bepalen"
+  },
+  "Bonjour Tom,\n\nJe souhaite échanger avec Attic-Ai.\n\nBesoin : ": {
+    "en": "Hello Tom,\n\nI’d like to discuss a project with Attic-Ai.\n\nNeed: ",
+    "nl": "Hallo Tom,\n\nIk wil graag een project met Attic-Ai bespreken.\n\nBehoefte: "
+  },
+  "À préciser ensemble": {
+    "en": "To clarify together",
+    "nl": "Samen te verduidelijken"
+  },
+  "\nÉchéance : ": {
+    "en": "\nTimeline: ",
+    "nl": "\nPlanning: "
+  },
+  "PARLONS DE VOTRE PROJET": {
+    "en": "LET’S DISCUSS YOUR PROJECT",
+    "nl": "LATEN WE JE PROJECT BESPREKEN"
+  },
+  "Le premier pas,": {
+    "en": "The first step",
+    "nl": "De eerste stap"
+  },
+  "c’est le contexte.": {
+    "en": "is the context.",
+    "nl": "is de context."
+  },
+  "Un brief court pour préparer notre échange. Aucun compte à créer.": {
+    "en": "A short brief to prepare our conversation. No account needed.",
+    "nl": "Een korte briefing om ons gesprek voor te bereiden. Geen account nodig."
+  },
+  "Ou écrivez-moi directement ↗": {
+    "en": "Or email me directly ↗",
+    "nl": "Of mail me rechtstreeks ↗"
+  },
+  "ET ENSUITE ?": {
+    "en": "WHAT HAPPENS NEXT?",
+    "nl": "EN DAARNA?"
+  },
+  "On clarifie votre besoin, puis je vous propose un périmètre et les prochaines étapes. Aucun devis automatique.": {
+    "en": "We clarify your need, then I suggest a scope and next steps. No automated quote.",
+    "nl": "We verduidelijken je behoefte. Daarna stel ik een scope en vervolgstappen voor. Geen automatische offerte."
+  },
+  "Étapes du brief": {
+    "en": "Brief steps",
+    "nl": "Stappen van de briefing"
+  },
+  "Votre besoin": {
+    "en": "Your need",
+    "nl": "Je behoefte"
+  },
+  "Le contexte": {
+    "en": "The context",
+    "nl": "De context"
+  },
+  "Récapitulatif": {
+    "en": "Summary",
+    "nl": "Samenvatting"
+  },
+  "Qu’aimeriez-vous faire avancer ?": {
+    "en": "What would you like to move forward?",
+    "nl": "Waar wil je mee verder?"
+  },
+  "J’ai besoin d’en parler": {
+    "en": "I need to talk it through",
+    "nl": "Ik wil er eerst over praten"
+  },
+  "Continuer": {
+    "en": "Continue",
+    "nl": "Verder"
+  },
+  "Racontez-nous la situation.": {
+    "en": "Tell us about the situation.",
+    "nl": "Vertel over de situatie."
+  },
+  "Votre besoin et les utilisateurs concernés": {
+    "en": "Your need and the people who will use it",
+    "nl": "Je behoefte en de beoogde gebruikers"
+  },
+  "Aujourd’hui, nous… Nous aimerions pouvoir…": {
+    "en": "Today, we… We’d like to be able to…",
+    "nl": "Vandaag doen we… We zouden graag…"
+  },
+  "Support envisagé": {
+    "en": "Platform in mind",
+    "nl": "Beoogd platform"
+  },
+  "Web": {
+    "en": "Web",
+    "nl": "Web"
+  },
+  "Mobile": {
+    "en": "Mobile",
+    "nl": "Mobiel"
+  },
+  "Desktop": {
+    "en": "Desktop",
+    "nl": "Desktop"
+  },
+  "Intégration à un outil existant": {
+    "en": "Integration with an existing tool",
+    "nl": "Integratie met een bestaande tool"
+  },
+  "Expérience / objet connecté": {
+    "en": "Experience / connected device",
+    "nl": "Ervaring / verbonden apparaat"
+  },
+  "Échéance": {
+    "en": "Timeline",
+    "nl": "Planning"
+  },
+  "Dès que possible": {
+    "en": "As soon as possible",
+    "nl": "Zo snel mogelijk"
+  },
+  "Dans les 3 prochains mois": {
+    "en": "Within the next 3 months",
+    "nl": "Binnen 3 maanden"
+  },
+  "Plus tard / exploration": {
+    "en": "Later / exploring",
+    "nl": "Later / verkennend"
+  },
+  "Enveloppe ou contrainte budgétaire (facultatif)": {
+    "en": "Budget or budget constraint (optional)",
+    "nl": "Budget of budgetbeperking (optioneel)"
+  },
+  "Votre nom": {
+    "en": "Your name",
+    "nl": "Je naam"
+  },
+  "Email de retour (facultatif)": {
+    "en": "Reply email (optional)",
+    "nl": "E-mailadres (optioneel)"
+  },
+  "← Retour": {
+    "en": "← Back",
+    "nl": "← Terug"
+  },
+  "Préparer le brief": {
+    "en": "Prepare the brief",
+    "nl": "Briefing voorbereiden"
+  },
+  "Votre point de départ": {
+    "en": "Your starting point",
+    "nl": "Je vertrekpunt"
+  },
+  "Besoin": {
+    "en": "Need",
+    "nl": "Behoefte"
+  },
+  "Contexte": {
+    "en": "Context",
+    "nl": "Context"
+  },
+  "Support · échéance": {
+    "en": "Platform · timeline",
+    "nl": "Platform · planning"
+  },
+  "Enveloppe": {
+    "en": "Budget",
+    "nl": "Budget"
+  },
+  "Premiers livrables à discuter :": {
+    "en": "Initial deliverables to discuss:",
+    "nl": "Eerste opleveringen om te bespreken:"
+  },
+  "Un projet avec Attic-Ai — ": {
+    "en": "A project with Attic-Ai — ",
+    "nl": "Een project met Attic-Ai — "
+  },
+  "premier échange": {
+    "en": "first conversation",
+    "nl": "eerste gesprek"
+  },
+  "Ouvrir mon email": {
+    "en": "Open my email",
+    "nl": "Open mijn e-mail"
+  },
+  "← Modifier": {
+    "en": "← Edit",
+    "nl": "← Aanpassen"
+  },
+  "Brief copié. Vous pouvez le coller dans votre email.": {
+    "en": "Brief copied. You can paste it into your email.",
+    "nl": "Briefing gekopieerd. Je kunt deze in je e-mail plakken."
+  },
+  "La copie est indisponible. Utilisez « Ouvrir mon email ».": {
+    "en": "Copying is unavailable. Use “Open my email”.",
+    "nl": "Kopiëren is niet beschikbaar. Gebruik ‘Open mijn e-mail’."
+  },
+  "Copier le brief": {
+    "en": "Copy the brief",
+    "nl": "Kopieer de briefing"
+  },
+  "Ce formulaire prépare un email dans votre messagerie. Rien n’est envoyé ni enregistré par le site.": {
+    "en": "This form prepares an email in your mail app. The site sends and stores nothing.",
+    "nl": "Dit formulier bereidt een e-mail voor in je mailprogramma. De site verstuurt en bewaart niets."
+  },
+  "ATTIC-AI / L’AGENCE": {
+    "en": "ATTIC-AI / THE STUDIO",
+    "nl": "ATTIC-AI / DE STUDIO"
+  },
+  "Bien cadrer.": {
+    "en": "Scope it well.",
+    "nl": "Goed afbakenen."
+  },
+  "Bien construire.": {
+    "en": "Build it well.",
+    "nl": "Goed bouwen."
+  },
+  "Pouvoir reprendre.": {
+    "en": "Keep it maintainable.",
+    "nl": "Zelf verder kunnen."
+  },
+  "Du conseil technique au produit utilisable, avec un interlocuteur qui garde la vue d’ensemble.": {
+    "en": "From technical advice to a working product, with one person keeping sight of the whole.",
+    "nl": "Van technisch advies tot een bruikbaar product, met één aanspreekpunt dat het overzicht houdt."
+  },
+  "Attic-Ai accompagne les porteurs de projet et les équipes qui veulent lancer un service, améliorer leurs outils ou explorer un usage de l’IA.": {
+    "en": "Attic-Ai supports founders and teams who want to launch a service, improve their tools or explore an AI use case.",
+    "nl": "Attic-Ai helpt initiatiefnemers en teams die een dienst willen lanceren, tools verbeteren of een AI-toepassing verkennen."
+  },
+  "Discuter de votre besoin": {
+    "en": "Discuss your needs",
+    "nl": "Bespreek je behoefte"
+  },
+  "Un périmètre explicite": {
+    "en": "An explicit scope",
+    "nl": "Een duidelijke scope"
+  },
+  "Des validations concrètes": {
+    "en": "Practical validation",
+    "nl": "Concrete toetsing"
+  },
+  "Une livraison documentée": {
+    "en": "A documented handover",
+    "nl": "Een gedocumenteerde overdracht"
+  },
+  "LES DOMAINES D’INTERVENTION": {
+    "en": "HOW WE CAN HELP",
+    "nl": "WAARMEE WE HELPEN"
+  },
+  "Le bon niveau d’aide.": {
+    "en": "The right support.",
+    "nl": "De juiste ondersteuning."
+  },
+  "Au bon moment.": {
+    "en": "At the right moment.",
+    "nl": "Op het juiste moment."
+  },
+  "Une mission peut commencer par du conseil et se prolonger par la réalisation. Chaque étape a ses livrables et ses critères de réussite.": {
+    "en": "An engagement can start with advice and continue into delivery. Each stage has its deliverables and success criteria.",
+    "nl": "Een opdracht kan beginnen met advies en overgaan in uitvoering. Elke fase heeft eigen opleveringen en succescriteria."
+  },
+  "Accès aux services": {
+    "en": "Jump to a service",
+    "nl": "Ga naar een dienst"
+  },
+  "Ce que vous récupérez": {
+    "en": "What you receive",
+    "nl": "Wat je krijgt"
+  },
+  "Ce que l’on mesure": {
+    "en": "What we measure",
+    "nl": "Wat we meten"
+  },
+  "Cadrer cette mission ↗": {
+    "en": "Scope this engagement ↗",
+    "nl": "Verken deze opdracht ↗"
+  },
+  "UNE MÉTHODE LISIBLE": {
+    "en": "A CLEAR PROCESS",
+    "nl": "EEN HELDERE WERKWIJZE"
+  },
+  "Pas de boîte noire": {
+    "en": "No black box",
+    "nl": "Geen zwarte doos"
+  },
+  "entre l’idée et la livraison.": {
+    "en": "between idea and delivery.",
+    "nl": "tussen idee en oplevering."
+  },
+  "Cadrer": {
+    "en": "Scope",
+    "nl": "Afbakenen"
+  },
+  "Usages, existant, contraintes et risques.": {
+    "en": "Users, existing systems, constraints and risks.",
+    "nl": "Gebruikers, bestaande systemen, voorwaarden en risico’s."
+  },
+  "Un périmètre et des critères d’acceptation.": {
+    "en": "A scope and acceptance criteria.",
+    "nl": "Een scope en acceptatiecriteria."
+  },
+  "Éprouver": {
+    "en": "Test",
+    "nl": "Toetsen"
+  },
+  "Tester l’hypothèse la plus incertaine.": {
+    "en": "Test the most uncertain assumption.",
+    "nl": "De meest onzekere aanname toetsen."
+  },
+  "Un prototype et une décision de poursuivre ou d’ajuster.": {
+    "en": "A prototype and a decision to proceed or adjust.",
+    "nl": "Een prototype en de keuze om door te gaan of bij te sturen."
+  },
+  "Construire": {
+    "en": "Build",
+    "nl": "Bouwen"
+  },
+  "Développer par étapes et montrer le résultat.": {
+    "en": "Develop in stages and show the result.",
+    "nl": "Stapsgewijs ontwikkelen en het resultaat tonen."
+  },
+  "Des versions vérifiables sur les parcours prévus.": {
+    "en": "Versions you can test against the agreed journeys.",
+    "nl": "Versies die je aan de afgesproken gebruiksscenario’s kunt toetsen."
+  },
+  "Transmettre": {
+    "en": "Hand over",
+    "nl": "Overdragen"
+  },
+  "Déployer, documenter et organiser la reprise.": {
+    "en": "Deploy, document and prepare the handover.",
+    "nl": "Uitrollen, documenteren en de overdracht voorbereiden."
+  },
+  "Le code, les accès convenus et une feuille de route.": {
+    "en": "The code, agreed access and a roadmap.",
+    "nl": "De code, afgesproken toegangen en een stappenplan."
+  },
+  "LA RÉUSSITE SE DÉFINIT ENSEMBLE": {
+    "en": "WE DEFINE SUCCESS TOGETHER",
+    "nl": "SUCCES BEPALEN WE SAMEN"
+  },
+  "Des mesures utiles.": {
+    "en": "Useful measures.",
+    "nl": "Nuttige metingen."
+  },
+  "Pas des chiffres": {
+    "en": "Not decorative",
+    "nl": "Geen cijfers"
+  },
+  "décoratifs.": {
+    "en": "numbers.",
+    "nl": "voor de sier."
+  },
+  "Ces indicateurs sont des critères à définir au cadrage, pas des performances déjà obtenues. La mesure compare un état initial et un usage testé dans les mêmes conditions.": {
+    "en": "These are criteria to agree during scoping, not results already achieved. Measurement compares a baseline and a tested use case under the same conditions.",
+    "nl": "Dit zijn criteria die we bij de verkenning afspreken, geen al behaalde resultaten. We vergelijken een beginsituatie met een geteste toepassing onder dezelfde omstandigheden."
+  },
+  "OBJECTIF": {
+    "en": "GOAL",
+    "nl": "DOEL"
+  },
+  "INDICATEUR": {
+    "en": "INDICATOR",
+    "nl": "INDICATOR"
+  },
+  "COMMENT LE VÉRIFIER": {
+    "en": "HOW TO VERIFY IT",
+    "nl": "HOE WE HET TOETSEN"
+  },
+  "Gagner du temps": {
+    "en": "Save time",
+    "nl": "Tijd besparen"
+  },
+  "Minutes par opération": {
+    "en": "Minutes per task",
+    "nl": "Minuten per taak"
+  },
+  "Chronométrer un scénario avant / après": {
+    "en": "Time a scenario before / after",
+    "nl": "Een scenario voor en na de verandering timen"
+  },
+  "Rendre le produit utilisable": {
+    "en": "Make the product usable",
+    "nl": "Het product bruikbaar maken"
+  },
+  "Taux de complétion": {
+    "en": "Completion rate",
+    "nl": "Voltooiingspercentage"
+  },
+  "Observer des utilisateurs sur un parcours": {
+    "en": "Observe users completing a journey",
+    "nl": "Gebruikers observeren tijdens een gebruiksscenario"
+  },
+  "Maîtriser une IA": {
+    "en": "Keep AI under control",
+    "nl": "Grip houden op AI"
+  },
+  "Coût · latence p95 · qualité": {
+    "en": "Cost · p95 latency · quality",
+    "nl": "Kosten · p95-latentie · kwaliteit"
+  },
+  "Évaluer un jeu de questions et ses sources": {
+    "en": "Evaluate a set of questions and sources",
+    "nl": "Een reeks vragen en bronnen beoordelen"
+  },
+  "Fiabiliser une intégration": {
+    "en": "Make an integration reliable",
+    "nl": "Een integratie betrouwbaar maken"
+  },
+  "Échecs et reprises manuelles": {
+    "en": "Failures and manual interventions",
+    "nl": "Fouten en handmatige ingrepen"
+  },
+  "Suivre les journaux sur une période convenue": {
+    "en": "Review logs over an agreed period",
+    "nl": "Logboeken over een afgesproken periode volgen"
+  },
+  "LEIDEN, NL": {
+    "en": "LEIDEN, NL",
+    "nl": "LEIDEN, NL"
+  },
+  "BUILD & CONSEIL": {
+    "en": "BUILD & CONSULTING",
+    "nl": "BOUW & ADVIES"
+  },
+  "LA PERSONNE DERRIÈRE L’ATELIER": {
+    "en": "THE PERSON BEHIND THE WORKSHOP",
+    "nl": "DE PERSOON ACHTER DE WERKPLAATS"
+  },
+  "Tom Buzon.": {
+    "en": "Tom Buzon.",
+    "nl": "Tom Buzon."
+  },
+  "Curieux par nature,": {
+    "en": "Curious by nature,",
+    "nl": "Nieuwsgierig van nature,"
+  },
+  "constructeur par pratique.": {
+    "en": "a builder through practice.",
+    "nl": "bouwer door ervaring."
+  },
+  "Développement web à Toulouse, contrôle de projet à l’Agence spatiale européenne, puis approfondissement du machine learning : mon parcours m’a appris à relier la technique, les contraintes et l’usage.": {
+    "en": "Web development in Toulouse, project control at the European Space Agency, then a deeper focus on machine learning: my experience has taught me to connect technology, constraints and real use.",
+    "nl": "Webontwikkeling in Toulouse, projectbeheersing bij het Europees Ruimteagentschap en daarna verdieping in machine learning: mijn ervaring heeft me geleerd techniek, randvoorwaarden en gebruik met elkaar te verbinden."
+  },
+  "Attic-Ai est mon atelier indépendant, né dans un grenier. J’y construis aussi mes propres projets. C’est une façon d’éprouver les outils, de comprendre leurs limites et de garder les mains dans le concret.": {
+    "en": "Attic-Ai is my independent workshop, born in an attic. I build my own projects here too. It lets me test tools, understand their limits and stay close to the practical work.",
+    "nl": "Attic-Ai is mijn onafhankelijke werkplaats, begonnen op een zolder. Ik bouw hier ook mijn eigen projecten. Zo test ik tools, leer ik hun grenzen kennen en blijf ik dicht bij de praktijk."
+  },
+  "Voir ce que cette approche produit ↗": {
+    "en": "See what this approach produces ↗",
+    "nl": "Bekijk wat deze aanpak oplevert ↗"
+  },
+  "DONNÉES & CONTACT": {
+    "en": "DATA & CONTACT",
+    "nl": "GEGEVENS & CONTACT"
+  },
+  "Un échange clair,": {
+    "en": "A clear conversation,",
+    "nl": "Een helder gesprek,"
+  },
+  "dès le départ.": {
+    "en": "from the start.",
+    "nl": "vanaf het begin."
+  },
+  "Vous gardez la main sur le premier contact.": {
+    "en": "You stay in control of the first contact.",
+    "nl": "Jij houdt de regie over het eerste contact."
+  },
+  "Le brief reste dans votre page jusqu’à l’ouverture de votre messagerie. Vous décidez de l’envoyer à Tom Buzon :": {
+    "en": "The brief stays in this page until you open your mail app. You decide whether to send it to Tom Buzon:",
+    "nl": "De briefing blijft in deze pagina tot je je mailprogramma opent. Jij beslist of je deze naar Tom Buzon stuurt:"
+  },
+  "Le conseiller est une démonstration d’IA.": {
+    "en": "The advisor is an AI demonstration.",
+    "nl": "De adviseur is een AI-demonstratie."
+  },
+  "Vos messages sont transmis à OpenRouter et au fournisseur du modèle pour générer la réponse. Le site ne conserve pas les conversations côté serveur. Évitez les données confidentielles ; les pratiques des fournisseurs restent applicables.": {
+    "en": "Your messages are sent to OpenRouter and the model provider to generate a reply. This site does not store conversations on the server. Avoid confidential data; the providers’ policies still apply.",
+    "nl": "Je berichten worden naar OpenRouter en de modelaanbieder gestuurd om een antwoord te genereren. Deze site bewaart geen gesprekken op de server. Deel geen vertrouwelijke gegevens; het beleid van de aanbieders blijft van toepassing."
+  },
+  "Politique OpenRouter ↗": {
+    "en": "OpenRouter policy ↗",
+    "nl": "Beleid van OpenRouter ↗"
+  },
+  "Pour une mission, les accès, l’hébergement, la confidentialité et les conditions de maintenance se définissent dans la proposition.": {
+    "en": "For an engagement, access, hosting, confidentiality and maintenance arrangements are defined in the proposal.",
+    "nl": "Voor een opdracht leggen we toegang, hosting, vertrouwelijkheid en onderhoud vast in het voorstel."
+  },
+  "Ouvrir": {
+    "en": "Open",
+    "nl": "Openen"
+  },
+  "Installer l’atmosphère, laisser entrer la musique.": {
+    "en": "Set the atmosphere and let the music in.",
+    "nl": "De sfeer neerzetten en de muziek binnenlaten."
+  },
+  "Accélérer": {
+    "en": "Accelerate",
+    "nl": "Versnellen"
+  },
+  "Changer de plan sur les accents du morceau.": {
+    "en": "Cut to a new shot on the track’s accents.",
+    "nl": "Van shot wisselen op de accenten van de muziek."
+  },
+  "Raconter": {
+    "en": "Tell the story",
+    "nl": "Vertellen"
+  },
+  "Articuler les scènes et les paroles horodatées.": {
+    "en": "Connect the scenes with time-aligned lyrics.",
+    "nl": "Scènes verbinden met tekst op de juiste tijdstippen."
+  },
+  "Résoudre": {
+    "en": "Resolve",
+    "nl": "Afronden"
+  },
+  "Conclure le mouvement, préparer le rendu.": {
+    "en": "Bring the movement to a close and prepare the render.",
+    "nl": "De beweging afronden en de render voorbereiden."
+  },
+  "FRAMEFORGE / STORYBOARD": {
+    "en": "FRAMEFORGE / STORYBOARD",
+    "nl": "FRAMEFORGE / STORYBOARD"
+  },
+  "Explorer un storyboard illustratif": {
+    "en": "Explore an illustrative storyboard",
+    "nl": "Verken een illustratief storyboard"
+  },
+  "Principe interactif illustré · Ce storyboard n’est pas une capture de l’application.": {
+    "en": "Interactive illustration · This storyboard is not an application screenshot.",
+    "nl": "Interactieve illustratie · Dit storyboard is geen schermafbeelding van de applicatie."
+  },
+  "Tout": {
+    "en": "All",
+    "nl": "Alles"
+  },
+  "ATTIC-AI / TRAVAUX & EXPLORATIONS": {
+    "en": "ATTIC-AI / WORK & EXPLORATIONS",
+    "nl": "ATTIC-AI / WERK & VERKENNINGEN"
+  },
+  "Une idée en": {
+    "en": "One idea",
+    "nl": "Het ene idee"
+  },
+  "entraîne": {
+    "en": "leads to",
+    "nl": "leidt tot"
+  },
+  "une autre.": {
+    "en": "another.",
+    "nl": "het andere."
+  },
+  "Retrouver une pensée. Se repérer par le son. Donner un rythme à des images. Changer de terrain, garder la même envie : comprendre, puis construire.": {
+    "en": "Retrieve a thought. Find your way through sound. Give images a rhythm. Change the terrain, keep the same drive: understand, then build.",
+    "nl": "Een gedachte terugvinden. Je weg vinden via geluid. Beelden een ritme geven. Het terrein verandert, de drijfveer blijft: begrijpen en dan bouwen."
+  },
+  "PRODUITS EN COURS": {
+    "en": "PRODUCTS IN PROGRESS",
+    "nl": "PRODUCTEN IN ONTWIKKELING"
+  },
+  "PROTOTYPES & ARCHIVES": {
+    "en": "PROTOTYPES & ARCHIVES",
+    "nl": "PROTOTYPES & ARCHIEF"
+  },
+  "PAR TOM BUZON": {
+    "en": "BY TOM BUZON",
+    "nl": "DOOR TOM BUZON"
+  },
+  "Chapitres du portfolio": {
+    "en": "Portfolio chapters",
+    "nl": "Portfoliohoofdstukken"
+  },
+  "La mémoire": {
+    "en": "Memory",
+    "nl": "Geheugen"
+  },
+  "L’écoute": {
+    "en": "Listening",
+    "nl": "Luisteren"
+  },
+  "Le mouvement": {
+    "en": "Movement",
+    "nl": "Beweging"
+  },
+  "L’espace": {
+    "en": "Space",
+    "nl": "Ruimte"
+  },
+  "Les détours": {
+    "en": "Detours",
+    "nl": "Omwegen"
+  },
+  "CHAPITRE 01 / ORGANISER LA PENSÉE": {
+    "en": "CHAPTER 01 / ORGANISING THOUGHT",
+    "nl": "HOOFDSTUK 01 / GEDACHTEN ORDENEN"
+  },
+  "PROJET PERSONNEL · EN DÉVELOPPEMENT": {
+    "en": "PERSONAL PROJECT · IN DEVELOPMENT",
+    "nl": "EIGEN PROJECT · IN ONTWIKKELING"
+  },
+  "Mastermind": {
+    "en": "Mastermind",
+    "nl": "Mastermind"
+  },
+  "Une mémoire": {
+    "en": "A memory",
+    "nl": "Een geheugen"
+  },
+  "qui relie les idées.": {
+    "en": "that connects ideas.",
+    "nl": "dat ideeën verbindt."
+  },
+  "L’information existe.": {
+    "en": "The information exists.",
+    "nl": "De informatie is er."
+  },
+  "Mais où est son contexte ?": {
+    "en": "But where is its context?",
+    "nl": "Maar waar is de context?"
+  },
+  "Une note dans un dossier, une décision dans une conversation, une source oubliée. Mastermind part de cette fragmentation pour construire un espace de connaissance personnel, local et relié.": {
+    "en": "A note in a folder, a decision in a conversation, a forgotten source. Mastermind starts from this fragmentation to build a personal, local and connected knowledge space.",
+    "nl": "Een notitie in een map, een besluit in een gesprek, een vergeten bron. Vanuit die versnippering bouwt Mastermind aan een persoonlijke, lokale en verbonden kennisomgeving."
+  },
+  "RAG local": {
+    "en": "Local RAG",
+    "nl": "Lokale RAG"
+  },
+  "Graphe de connaissance": {
+    "en": "Knowledge graph",
+    "nl": "Kennisgraaf"
+  },
+  "Explorer le projet ↓": {
+    "en": "Explore the project ↓",
+    "nl": "Verken het project ↓"
+  },
+  "Capturer": {
+    "en": "Capture",
+    "nl": "Vastleggen"
+  },
+  "Notes Markdown, documents, images et audio. Un éditeur avec Mermaid et Excalidraw, pour garder les idées sous la forme qui leur convient.": {
+    "en": "Markdown notes, documents, images and audio. An editor with Mermaid and Excalidraw to keep ideas in the form that suits them.",
+    "nl": "Markdown-notities, documenten, beelden en audio. Een editor met Mermaid en Excalidraw om ideeën in een passende vorm vast te leggen."
+  },
+  "Relier": {
+    "en": "Connect",
+    "nl": "Verbinden"
+  },
+  "Graphe, métadonnées, dates et liens. La recherche combine le sens et les mots pour retrouver un passage dans son contexte.": {
+    "en": "A graph, metadata, dates and links. Search combines meaning and words to retrieve a passage in context.",
+    "nl": "Een graaf, metadata, datums en links. De zoekfunctie combineert betekenis en woorden om passages in hun context terug te vinden."
+  },
+  "Interroger": {
+    "en": "Ask",
+    "nl": "Bevragen"
+  },
+  "Une IA reliée aux sources. Le RAG local avec Ollama permet d’explorer ses documents tout en gardant la maîtrise de ses fichiers.": {
+    "en": "AI connected to sources. Local RAG with Ollama lets you explore your documents while keeping control of your files.",
+    "nl": "AI die met bronnen verbonden is. Met lokale RAG via Ollama doorzoek je je documenten en behoud je de controle over je bestanden."
+  },
+  "Ce qui est construit": {
+    "en": "What has been built",
+    "nl": "Wat er al gebouwd is"
+  },
+  "· Application Electron, import documentaire, recherche hybride, vues graphe et Kanban, chaîne de réponse contextualisée.": {
+    "en": "· Electron application, document imports, hybrid search, graph and Kanban views, contextualised answers.",
+    "nl": "· Electron-applicatie, documentimport, hybride zoekfunctie, graaf- en Kanbanweergaven en antwoorden met context."
+  },
+  "Ce qui reste à éprouver": {
+    "en": "What still needs testing",
+    "nl": "Wat nog getoetst moet worden"
+  },
+  "· Qualité de la recherche sur des corpus variés, robustesse des imports et ergonomie au quotidien. La centralisation d’agents et de missions est une piste d’évolution.": {
+    "en": "· Search quality across varied collections, import robustness and everyday usability. Bringing agents and missions together is a direction for future work.",
+    "nl": "· Zoekkwaliteit op uiteenlopende verzamelingen, robuustheid van imports en dagelijks gebruiksgemak. Het samenbrengen van agents en taken is een mogelijke vervolgstap."
+  },
+  "ELECTRON / NODE / PYTHON / LANGGRAPH / HNSW · QDRANT / OLLAMA": {
+    "en": "ELECTRON / NODE / PYTHON / LANGGRAPH / HNSW · QDRANT / OLLAMA",
+    "nl": "ELECTRON / NODE / PYTHON / LANGGRAPH / HNSW · QDRANT / OLLAMA"
+  },
+  "DE LA MÉMOIRE À LA PERCEPTION": {
+    "en": "FROM MEMORY TO PERCEPTION",
+    "nl": "VAN GEHEUGEN NAAR WAARNEMING"
+  },
+  "Et si l’interface": {
+    "en": "What if an interface",
+    "nl": "Wat als een interface"
+  },
+  "se faisait": {
+    "en": "could be",
+    "nl": "te"
+  },
+  "entendre": {
+    "en": "heard",
+    "nl": "horen was"
+  },
+  "CHAPITRE 02 / EXPLORER PAR LE SON": {
+    "en": "CHAPTER 02 / EXPLORING THROUGH SOUND",
+    "nl": "HOOFDSTUK 02 / VERKENNEN VIA GELUID"
+  },
+  "GODOT · PROTOTYPE JOUABLE": {
+    "en": "GODOT · PLAYABLE PROTOTYPE",
+    "nl": "GODOT · SPEELBAAR PROTOTYPE"
+  },
+  "VESPER": {
+    "en": "VESPER",
+    "nl": "VESPER"
+  },
+  "Le silence": {
+    "en": "The silence",
+    "nl": "De stilte"
+  },
+  "des coursives.": {
+    "en": "of the passageways.",
+    "nl": "in de gangen."
+  },
+  "Un vaisseau à explorer. Une mission à accomplir. LIA, une présence vocale qui aide à comprendre où l’on se trouve et comment avancer.": {
+    "en": "A ship to explore. A mission to complete. LIA, a voice that helps you understand where you are and how to move forward.",
+    "nl": "Een schip om te verkennen. Een missie om te volbrengen. LIA, een stem die je helpt begrijpen waar je bent en hoe je verder komt."
+  },
+  "Le guidage s’appuie sur la géométrie du niveau. L’interaction mêle navigation, voix et repères sonores, avec un parcours en français et en anglais.": {
+    "en": "Guidance is grounded in the level’s geometry. Interaction combines navigation, voice and audio cues, with French and English journeys.",
+    "nl": "De begeleiding is gebaseerd op de geometrie van het level. Navigatie, stem en geluidsaanwijzingen komen samen in een Frans- en Engelstalige ervaring."
+  },
+  "Exploration audio": {
+    "en": "Audio exploration",
+    "nl": "Audioverkenning"
+  },
+  "IA vocale": {
+    "en": "Voice AI",
+    "nl": "Spraak-AI"
+  },
+  "Interaction": {
+    "en": "Interaction",
+    "nl": "Interactie"
+  },
+  "Carte développeur de VESPER et exemple de guidage textuel de LIA à travers les coursives": {
+    "en": "VESPER developer map with an example of LIA’s text guidance through the passageways",
+    "nl": "Ontwikkelaarskaart van VESPER met een voorbeeld van LIA’s tekstuele begeleiding door de gangen"
+  },
+  "Capture réelle du prototype · Vue de développement du niveau.": {
+    "en": "Actual prototype capture · Level development view.",
+    "nl": "Echte opname van het prototype · Ontwikkelaarsweergave van het level."
+  },
+  "L’enjeu": {
+    "en": "The challenge",
+    "nl": "De uitdaging"
+  },
+  "Donner une indication située et compréhensible, plutôt qu’une réponse vocale déconnectée de l’espace. Une exploration de l’accessibilité, qui reste à valider avec les publics concernés.": {
+    "en": "Give understandable, situated guidance instead of a voice answer detached from the space. An exploration of accessibility that still needs validation with the people concerned.",
+    "nl": "Begrijpelijke aanwijzingen geven die bij de locatie passen. Een verkenning van toegankelijkheid die nog met de betrokken doelgroepen moet worden getoetst."
+  },
+  "CHAPITRE 03 / CONSTRUIRE LE RYTHME": {
+    "en": "CHAPTER 03 / BUILDING RHYTHM",
+    "nl": "HOOFDSTUK 03 / RITME BOUWEN"
+  },
+  "OUTIL DESKTOP · EN DÉVELOPPEMENT": {
+    "en": "DESKTOP TOOL · IN DEVELOPMENT",
+    "nl": "DESKTOPTOOL · IN ONTWIKKELING"
+  },
+  "FrameForge": {
+    "en": "FrameForge",
+    "nl": "FrameForge"
+  },
+  "De l’audio": {
+    "en": "From audio",
+    "nl": "Van audio"
+  },
+  "à la séquence.": {
+    "en": "to sequence.",
+    "nl": "naar sequentie."
+  },
+  "Une musique donne le tempo. Le storyboard organise la narration. FrameForge Studio relie les deux pour préparer et rendre des clips.": {
+    "en": "Music sets the tempo. A storyboard shapes the narrative. FrameForge Studio connects the two to prepare and render clips.",
+    "nl": "Muziek bepaalt het tempo. Een storyboard ordent het verhaal. FrameForge Studio verbindt beide om clips voor te bereiden en te renderen."
+  },
+  "Analyse des temps et des accents, transcription locale horodatée, préparation des scènes et rendu vidéo : une chaîne de création qui relie l’IA à un résultat monté.": {
+    "en": "Beat and onset analysis, timestamped local transcription, scene preparation and video rendering: a creative pipeline connecting AI to an edited result.",
+    "nl": "Analyse van beats en accenten, lokale transcriptie met tijdcodes, scènevoorbereiding en videorendering: een creatief proces dat AI met een gemonteerd resultaat verbindt."
+  },
+  "Tauri / React": {
+    "en": "Tauri / React",
+    "nl": "Tauri / React"
+  },
+  "Parakeet": {
+    "en": "Parakeet",
+    "nl": "Parakeet"
+  },
+  "Remotion": {
+    "en": "Remotion",
+    "nl": "Remotion"
+  },
+  "Garder une intention de réalisation tout en automatisant les opérations répétitives. Le projet travaille sur la mise en images d’un audio ; il ne prétend pas composer la musique.": {
+    "en": "Keep a directorial intent while automating repetitive operations. The project puts existing audio into images; it does not claim to compose the music.",
+    "nl": "Een regievisie behouden terwijl herhalende handelingen worden geautomatiseerd. Het project zet bestaande audio om in beelden; het componeert de muziek niet."
+  },
+  "DE L’ÉCRAN À CE QUI NOUS ENTOURE": {
+    "en": "FROM THE SCREEN TO THE WORLD AROUND US",
+    "nl": "VAN HET SCHERM NAAR DE WERELD OM ONS HEEN"
+  },
+  "Les idées ont aussi": {
+    "en": "Ideas also",
+    "nl": "Ideeën hebben ook"
+  },
+  "besoin": {
+    "en": "need",
+    "nl": "behoefte aan"
+  },
+  "d’espace.": {
+    "en": "space.",
+    "nl": "ruimte."
+  },
+  "Rendu Blender d’une pièce sous les combles, avec canapé, bureau et fenêtre": {
+    "en": "Blender render of an attic room with a sofa, desk and window",
+    "nl": "Blender-render van een zolderkamer met bank, bureau en raam"
+  },
+  "RENDU RÉEL / MODÉLISATION BLENDER": {
+    "en": "ACTUAL RENDER / BLENDER MODELLING",
+    "nl": "ECHTE RENDER / BLENDER-MODELLERING"
+  },
+  "CHAPITRE 04 / PASSER AU VOLUME": {
+    "en": "CHAPTER 04 / INTO THREE DIMENSIONS",
+    "nl": "HOOFDSTUK 04 / NAAR DRIE DIMENSIES"
+  },
+  "Imaginer.": {
+    "en": "Imagine.",
+    "nl": "Verbeelden."
+  },
+  "Modéliser.": {
+    "en": "Model.",
+    "nl": "Modelleren."
+  },
+  "Habiter l’idée.": {
+    "en": "Step inside the idea.",
+    "nl": "Het idee binnenstappen."
+  },
+  "Reconstituer un espace, travailler ses matériaux, trouver le bon point de vue. La modélisation 3D apporte une autre manière de penser les volumes et de rendre une intention visible.": {
+    "en": "Recreate a space, work on its materials, find the right viewpoint. 3D modelling offers another way to think about volumes and make an intention visible.",
+    "nl": "Een ruimte nabouwen, materialen uitwerken en het juiste standpunt vinden. 3D-modellering biedt een andere manier om over volumes na te denken en een intentie zichtbaar te maken."
+  },
+  "Blender": {
+    "en": "Blender",
+    "nl": "Blender"
+  },
+  "Modélisation": {
+    "en": "Modelling",
+    "nl": "Modellering"
+  },
+  "Matériaux & rendu": {
+    "en": "Materials & rendering",
+    "nl": "Materialen & rendering"
+  },
+  "ET DU VOLUME À L’ACTION": {
+    "en": "FROM VOLUME TO ACTION",
+    "nl": "VAN VOLUME NAAR ACTIE"
+  },
+  "Car AI.": {
+    "en": "Car AI.",
+    "nl": "Car AI."
+  },
+  "Quand le code": {
+    "en": "When code",
+    "nl": "Wanneer code"
+  },
+  "rencontre le réel.": {
+    "en": "meets the real world.",
+    "nl": "de echte wereld ontmoet."
+  },
+  "Relier vision, interprétation et mouvement sur un Raspberry Pi 4.": {
+    "en": "Connect vision, interpretation and movement on a Raspberry Pi 4.",
+    "nl": "Beeldherkenning, interpretatie en beweging verbinden op een Raspberry Pi 4."
+  },
+  "Ce prototype, documenté dans le portfolio précédent, explore une boucle complète : percevoir avec une caméra, interpréter avec un modèle multimodal, puis déclencher une action physique.": {
+    "en": "This prototype, documented in the previous portfolio, explores a complete loop: perceive through a camera, interpret with a multimodal model, then trigger a physical action.",
+    "nl": "Dit prototype uit het eerdere portfolio verkent een volledige lus: waarnemen met een camera, interpreteren met een multimodaal model en daarna een fysieke actie uitvoeren."
+  },
+  "Un terrain d’expérimentation pour les interfaces entre logiciel et matériel. La sûreté, la latence et la robustesse restent des contraintes centrales avant tout usage industriel.": {
+    "en": "An experimental ground for interfaces between software and hardware. Safety, latency and robustness remain central constraints before any industrial use.",
+    "nl": "Een proeftuin voor de verbinding tussen software en hardware. Veiligheid, latentie en robuustheid blijven essentieel voordat industrieel gebruik mogelijk is."
+  },
+  "Raspberry Pi 4": {
+    "en": "Raspberry Pi 4",
+    "nl": "Raspberry Pi 4"
+  },
+  "Vision": {
+    "en": "Vision",
+    "nl": "Beeldherkenning"
+  },
+  "Prototype IoT": {
+    "en": "IoT prototype",
+    "nl": "IoT-prototype"
+  },
+  "CHAPITRE 05 / LES DÉTOURS COMPTENT": {
+    "en": "CHAPTER 05 / DETOURS MATTER",
+    "nl": "HOOFDSTUK 05 / OMWEGEN TELLEN MEE"
+  },
+  "Le carnet": {
+    "en": "The exploration",
+    "nl": "Het"
+  },
+  "d’explorations.": {
+    "en": "notebook.",
+    "nl": "verkenningsboek."
+  },
+  "Les projets récents s’appuient sur ces essais. Applications, data, génération et outils : des archives pour montrer le chemin, avec leur contexte.": {
+    "en": "Recent projects build on these experiments. Applications, data, generation and tools: an archive of the journey, with context.",
+    "nl": "Recente projecten bouwen voort op deze experimenten. Applicaties, data, generatie en tools: een archief van de afgelegde weg, met context."
+  },
+  "Filtrer les archives": {
+    "en": "Filter the archives",
+    "nl": "Filter het archief"
+  },
+  "IA": {
+    "en": "AI",
+    "nl": "AI"
+  },
+  "Data": {
+    "en": "Data",
+    "nl": "Data"
+  },
+  "Applications": {
+    "en": "Applications",
+    "nl": "Applicaties"
+  },
+  "Création": {
+    "en": "Creative",
+    "nl": "Creatief"
+  },
+  "VOTRE PROJET A PEUT-ÊTRE SA PLACE DANS CETTE HISTOIRE": {
+    "en": "YOUR PROJECT MIGHT BELONG IN THIS STORY",
+    "nl": "MISSCHIEN PAST JOUW PROJECT IN DIT VERHAAL"
+  },
+  "Un autre terrain": {
+    "en": "Another field",
+    "nl": "Een nieuw terrein"
+  },
+  "à explorer ?": {
+    "en": "to explore?",
+    "nl": "om te verkennen?"
+  },
+  "Parlons de votre projet": {
+    "en": "Let’s discuss your project",
+    "nl": "Laten we je project bespreken"
+  },
+  "Décider quoi construire, avant de le construire.": {
+    "en": "Decide what to build before building it.",
+    "nl": "Bepalen wat je bouwt voordat je begint."
+  },
+  "Une idée à clarifier, un produit à débloquer ou un choix technique à trancher.": {
+    "en": "An idea to clarify, a product to unblock or a technical decision to make.",
+    "nl": "Een idee verduidelijken, een product weer op gang helpen of een technische keuze maken."
+  },
+  "Audit de l’existant, entretiens sur les usages, comparaison des options et identification des dépendances. Un périmètre priorisé pour distinguer l’indispensable de la suite.": {
+    "en": "Review the existing system, discuss usage, compare options and identify dependencies. Prioritise the scope to separate essentials from later improvements.",
+    "nl": "De bestaande situatie onderzoeken, het gebruik bespreken, opties vergelijken en afhankelijkheden bepalen. De scope prioriteren om het essentiële van latere verbeteringen te scheiden."
+  },
+  "Diagnostic et risques": {
+    "en": "Diagnosis and risks",
+    "nl": "Analyse en risico’s"
+  },
+  "Scénarios techniques argumentés": {
+    "en": "Reasoned technical options",
+    "nl": "Onderbouwde technische scenario’s"
+  },
+  "Feuille de route et critères de validation": {
+    "en": "Roadmap and validation criteria",
+    "nl": "Stappenplan en toetsingscriteria"
+  },
+  "Décisions en suspens levées, risques testés, périmètre estimable.": {
+    "en": "Open decisions resolved, risks tested, scope ready to estimate.",
+    "nl": "Openstaande keuzes gemaakt, risico’s getoetst en een scope die te ramen is."
+  },
+  "Le cadrage définit le budget et le calendrier ; il ne les suppose pas.": {
+    "en": "Scoping defines the budget and timeline; it does not assume them.",
+    "nl": "De verkenning bepaalt budget en planning; ze worden niet vooraf aangenomen."
+  },
+  "Mettre une hypothèse entre les mains des utilisateurs.": {
+    "en": "Put an assumption in users’ hands.",
+    "nl": "Een aanname in de handen van gebruikers leggen."
+  },
+  "Un nouveau service à tester avant d’investir dans une application complète.": {
+    "en": "A new service to test before investing in a complete application.",
+    "nl": "Een nieuwe dienst testen voordat je in een volledige applicatie investeert."
+  },
+  "Parcours utilisateur, prototype fonctionnel, implémentation du scénario essentiel puis retours terrain. Le prototype teste la faisabilité ; le MVP teste un usage réel.": {
+    "en": "User journeys, a working prototype, the core scenario and feedback from use. A prototype tests feasibility; an MVP tests a real use case.",
+    "nl": "Gebruikersscenario’s, een werkend prototype, het kernscenario en feedback uit de praktijk. Een prototype toetst haalbaarheid; een MVP toetst echt gebruik."
+  },
+  "Parcours et prototype utilisable": {
+    "en": "User journey and working prototype",
+    "nl": "Gebruikersscenario en werkend prototype"
+  },
+  "Code source et déploiement de démonstration": {
+    "en": "Source code and demo deployment",
+    "nl": "Broncode en demo-omgeving"
+  },
+  "Plan de test et bilan des retours": {
+    "en": "Test plan and feedback review",
+    "nl": "Testplan en evaluatie van feedback"
+  },
+  "Taux de complétion du parcours, temps jusqu’à la première valeur, retours utilisateurs.": {
+    "en": "Journey completion, time to first value and user feedback.",
+    "nl": "Voltooiing van het scenario, tijd tot eerste waarde en gebruikersfeedback."
+  },
+  "Les fonctions secondaires restent dans une feuille de route explicite.": {
+    "en": "Secondary features remain in an explicit roadmap.",
+    "nl": "Aanvullende functies blijven in een duidelijk stappenplan staan."
+  },
+  "Faire tenir toute l’expérience, du premier écran à la base de données.": {
+    "en": "Connect the whole experience, from the first screen to the database.",
+    "nl": "De hele ervaring verbinden, van het eerste scherm tot de database."
+  },
+  "Un outil métier, un produit web, une application mobile ou desktop à concevoir ou reprendre.": {
+    "en": "A business tool, web product, mobile or desktop application to design or take over.",
+    "nl": "Een bedrijfstool, webproduct of mobiele of desktopapplicatie ontwerpen of overnemen."
+  },
+  "Interfaces, API, authentification, données et intégrations. Accessibilité, performance et référencement technique sont intégrés au travail sur le web, avec une livraison documentée.": {
+    "en": "Interfaces, APIs, authentication, data and integrations. Accessibility, performance and technical SEO are part of the web work, with a documented handover.",
+    "nl": "Interfaces, API’s, authenticatie, data en integraties. Toegankelijkheid, prestaties en technische SEO horen bij webontwikkeling, met een gedocumenteerde overdracht."
+  },
+  "Application front et back": {
+    "en": "Front-end and back-end application",
+    "nl": "Front-end- en back-endapplicatie"
+  },
+  "Tests des parcours critiques": {
+    "en": "Tests for critical user journeys",
+    "nl": "Tests voor kritieke gebruikersscenario’s"
+  },
+  "Documentation, déploiement et passation": {
+    "en": "Documentation, deployment and handover",
+    "nl": "Documentatie, uitrol en overdracht"
+  },
+  "Erreurs par parcours, latence p95, Core Web Vitals, disponibilité selon l’hébergement.": {
+    "en": "Errors per journey, p95 latency, Core Web Vitals and availability according to hosting.",
+    "nl": "Fouten per scenario, p95-latentie, Core Web Vitals en beschikbaarheid afhankelijk van de hosting."
+  },
+  "Hébergement, maintenance et services tiers sont cadrés séparément.": {
+    "en": "Hosting, maintenance and third-party services are scoped separately.",
+    "nl": "Hosting, onderhoud en externe diensten worden apart afgebakend."
+  },
+  "IA & assistants documentaires": {
+    "en": "AI & document assistants",
+    "nl": "AI & documentassistenten"
+  },
+  "Relier un modèle à vos usages, vos sources et vos outils.": {
+    "en": "Connect a model to your use cases, sources and tools.",
+    "nl": "Een model verbinden met je toepassingen, bronnen en tools."
+  },
+  "Des documents difficiles à exploiter ou une interaction qui mérite un assistant contextualisé.": {
+    "en": "Documents that are hard to use, or an interaction that needs a contextual assistant.",
+    "nl": "Moeilijk bruikbare documenten of een interactie die een contextbewuste assistent nodig heeft."
+  },
+  "Préparation des sources, recherche documentaire RAG, choix du modèle, outils métier et interface de conversation. Évaluation sur des questions représentatives, y compris les cas où le modèle doit s’abstenir.": {
+    "en": "Source preparation, document retrieval with RAG, model choice, business tools and a chat interface. Evaluation on representative questions, including cases where the model should abstain.",
+    "nl": "Bronnen voorbereiden, documenten doorzoeken met RAG, een model kiezen, bedrijfstools koppelen en een chatinterface bouwen. Evaluatie met representatieve vragen, ook wanneer het model geen antwoord moet geven."
+  },
+  "Assistant intégré et sources reliées": {
+    "en": "Integrated assistant with connected sources",
+    "nl": "Geïntegreerde assistent met verbonden bronnen"
+  },
+  "Jeu de questions d’évaluation": {
+    "en": "Evaluation question set",
+    "nl": "Vragenset voor evaluatie"
+  },
+  "Suivi de la latence, des erreurs et des coûts": {
+    "en": "Latency, error and cost monitoring",
+    "nl": "Monitoring van latentie, fouten en kosten"
+  },
+  "Réponses soutenues par les sources, taux d’abstention pertinent, coût par requête.": {
+    "en": "Source-supported answers, appropriate abstention and cost per request.",
+    "nl": "Antwoorden ondersteund door bronnen, gepast afzien van antwoord en kosten per verzoek."
+  },
+  "Local ou cloud selon vos contraintes. Un assistant ne garantit pas une réponse juste à chaque question.": {
+    "en": "Local or cloud, depending on your constraints. An assistant cannot guarantee a correct answer to every question.",
+    "nl": "Lokaal of in de cloud, afhankelijk van je voorwaarden. Een assistent kan niet op elke vraag een juist antwoord garanderen."
+  },
+  "Data & machine learning": {
+    "en": "Data & machine learning",
+    "nl": "Data & machine learning"
+  },
+  "Passer d’un jeu de données à une décision vérifiable.": {
+    "en": "Go from a dataset to a verifiable decision.",
+    "nl": "Van een dataset naar een toetsbaar besluit."
+  },
+  "Un besoin de prédiction, de classification, de recherche ou de visualisation.": {
+    "en": "A need for prediction, classification, search or visualisation.",
+    "nl": "Een behoefte aan voorspelling, classificatie, zoeken of visualisatie."
+  },
+  "Audit et préparation des données, baseline, expérimentation puis évaluation sur un jeu distinct. Mise à disposition du résultat dans une API ou un tableau de bord.": {
+    "en": "Data review and preparation, a baseline, experimentation and evaluation on a separate dataset. Make the result available through an API or dashboard.",
+    "nl": "Data onderzoeken en voorbereiden, een basislijn maken, experimenteren en evalueren op een aparte dataset. Het resultaat beschikbaar maken via een API of dashboard."
+  },
+  "Pipeline de données reproductible": {
+    "en": "Reproducible data pipeline",
+    "nl": "Reproduceerbare datapipeline"
+  },
+  "Modèle et rapport d’évaluation": {
+    "en": "Model and evaluation report",
+    "nl": "Model en evaluatierapport"
+  },
+  "API ou visualisation exploitable": {
+    "en": "Usable API or visualisation",
+    "nl": "Bruikbare API of visualisatie"
+  },
+  "MAE pour une régression, précision/rappel pour une classification, dérive des données.": {
+    "en": "MAE for regression, precision/recall for classification, data drift.",
+    "nl": "MAE voor regressie, precisie/recall voor classificatie en datadrift."
+  },
+  "La qualité et la disponibilité des données conditionnent les résultats.": {
+    "en": "Results depend on data quality and availability.",
+    "nl": "De kwaliteit en beschikbaarheid van data bepalen de resultaten."
+  },
+  "Automatisation & intégrations": {
+    "en": "Automation & integrations",
+    "nl": "Automatisering & integraties"
+  },
+  "Enlever les manipulations qui coupent vos journées.": {
+    "en": "Remove the manual steps that interrupt your day.",
+    "nl": "Handelingen wegnemen die je werkdag onderbreken."
+  },
+  "Des outils isolés, des ressaisies ou des tâches répétitives.": {
+    "en": "Disconnected tools, duplicate entry or repetitive tasks.",
+    "nl": "Losstaande tools, dubbele invoer of herhalende taken."
+  },
+  "Cartographie du processus, connexion des API et automatisation des étapes stables. Gestion des erreurs, journalisation et reprise manuelle quand une exception survient.": {
+    "en": "Map the process, connect APIs and automate stable steps. Handle errors, keep logs and provide a manual recovery path for exceptions.",
+    "nl": "Het proces in kaart brengen, API’s verbinden en stabiele stappen automatiseren. Fouten afhandelen, logboeken bijhouden en handmatig herstel mogelijk maken bij uitzonderingen."
+  },
+  "Workflow connecté à vos outils": {
+    "en": "A workflow connected to your tools",
+    "nl": "Een workflow die op je tools is aangesloten"
+  },
+  "Alertes et gestion des échecs": {
+    "en": "Alerts and failure handling",
+    "nl": "Meldingen en foutafhandeling"
+  },
+  "Documentation et reprise en main": {
+    "en": "Documentation and handover",
+    "nl": "Documentatie en overdracht"
+  },
+  "Temps par opération, taux d’échec, reprises manuelles et coût d’exécution.": {
+    "en": "Time per operation, failure rate, manual interventions and execution cost.",
+    "nl": "Tijd per handeling, foutpercentage, handmatige ingrepen en uitvoeringskosten."
+  },
+  "Les accès, quotas et possibilités des API tierces sont vérifiés au cadrage.": {
+    "en": "Third-party API access, quotas and capabilities are checked during scoping.",
+    "nl": "Toegang, quota en mogelijkheden van externe API’s worden tijdens de verkenning gecontroleerd."
+  },
+  "Expériences & prototypes créatifs": {
+    "en": "Creative experiences & prototypes",
+    "nl": "Creatieve ervaringen & prototypes"
+  },
+  "Quand l’idée sort du navigateur.": {
+    "en": "When the idea leaves the browser.",
+    "nl": "Wanneer het idee de browser verlaat."
+  },
+  "Une expérience qui mêle image, son, espace ou objet physique.": {
+    "en": "An experience combining image, sound, space or a physical object.",
+    "nl": "Een ervaring die beeld, geluid, ruimte of een fysiek object combineert."
+  },
+  "Modélisation et rendu 3D, pipelines vidéo et audio, interactions Godot ou prototype connecté. L’expérimentation commence par une preuve technique ciblée.": {
+    "en": "3D modelling and rendering, video and audio pipelines, Godot interactions or a connected prototype. Experimentation starts with a focused technical proof.",
+    "nl": "3D-modellering en rendering, video- en audiopipelines, Godot-interacties of een verbonden prototype. Het experiment begint met een gerichte technische proef."
+  },
+  "Démonstrateur interactif ou média": {
+    "en": "Interactive demonstrator or media",
+    "nl": "Interactieve demonstrator of media"
+  },
+  "Assets et sources convenus": {
+    "en": "Agreed assets and source files",
+    "nl": "Afgesproken assets en bronbestanden"
+  },
+  "Limites et recommandations pour la suite": {
+    "en": "Limits and next-step recommendations",
+    "nl": "Beperkingen en aanbevelingen voor vervolgstappen"
+  },
+  "Fluidité, temps de rendu, synchronisation audiovisuelle ou latence d’interaction.": {
+    "en": "Smoothness, rendering time, audiovisual sync or interaction latency.",
+    "nl": "Vloeiendheid, rendertijd, audiovisuele synchronisatie of interactielatentie."
+  },
+  "Un prototype IoT n’est pas un produit industrialisé ou certifié.": {
+    "en": "An IoT prototype is not an industrialised or certified product.",
+    "nl": "Een IoT-prototype is geen geïndustrialiseerd of gecertificeerd product."
+  },
+  "Audio / vidéo": {
+    "en": "Audio / video",
+    "nl": "Audio / video"
+  },
+  "Chess Agent": {
+    "en": "Chess Agent",
+    "nl": "Chess Agent"
+  },
+  "Un coach d’échecs qui relie conversation et outils spécialisés.": {
+    "en": "A chess coach connecting conversation with specialised tools.",
+    "nl": "Een schaakcoach die gesprekken met gespecialiseerde tools verbindt."
+  },
+  "Projet présenté dans le portfolio précédent.": {
+    "en": "Project featured in the previous portfolio.",
+    "nl": "Project uit het eerdere portfolio."
+  },
+  "ML Delivery": {
+    "en": "ML Delivery",
+    "nl": "ML Delivery"
+  },
+  "Rendre un modèle utilisable au-delà du notebook : suivi des expériences, API et orchestration.": {
+    "en": "Make a model usable beyond the notebook: experiment tracking, APIs and orchestration.",
+    "nl": "Een model bruikbaar maken buiten het notebook: experimenten volgen, API’s en orkestratie."
+  },
+  "Travail sur la chaîne de livraison ML.": {
+    "en": "Work on the ML delivery pipeline.",
+    "nl": "Werk aan het opleverproces voor ML."
+  },
+  "Relier les ingrédients disponibles, les recettes et la liste de courses dans une application mobile.": {
+    "en": "Connect available ingredients, recipes and a shopping list in a mobile app.",
+    "nl": "Beschikbare ingrediënten, recepten en een boodschappenlijst verbinden in een mobiele app."
+  },
+  "Projet historique.": {
+    "en": "Past project.",
+    "nl": "Eerder project."
+  },
+  "Estimation immobilière": {
+    "en": "Property valuation",
+    "nl": "Vastgoedwaardering"
+  },
+  "Explorer des données immobilières publiques françaises et les restituer en visualisations.": {
+    "en": "Explore French public property data and turn it into visualisations.",
+    "nl": "Franse openbare vastgoedgegevens verkennen en visualiseren."
+  },
+  "Projet historique ; aucune précision prédictive revendiquée.": {
+    "en": "Past project; no predictive accuracy claimed.",
+    "nl": "Eerder project; er wordt geen voorspellende nauwkeurigheid geclaimd."
+  },
+  "Mosaic Generator": {
+    "en": "Mosaic Generator",
+    "nl": "Mosaic Generator"
+  },
+  "Recomposer une image à partir d’une bibliothèque locale de petites images.": {
+    "en": "Recreate an image from a local library of smaller images.",
+    "nl": "Een afbeelding opbouwen uit een lokale verzameling kleinere afbeeldingen."
+  },
+  "Python · Traitement d’image": {
+    "en": "Python · Image processing",
+    "nl": "Python · Beeldverwerking"
+  },
+  "Exploration créative.": {
+    "en": "Creative exploration.",
+    "nl": "Creatieve verkenning."
+  },
+  "Teach Me Anything": {
+    "en": "Teach Me Anything",
+    "nl": "Teach Me Anything"
+  },
+  "Assembler voix, texte et vidéo pour produire de courts contenus pédagogiques.": {
+    "en": "Combine voice, text and video into short educational content.",
+    "nl": "Stem, tekst en video samenvoegen tot korte educatieve content."
+  },
+  "Prototype historique.": {
+    "en": "Past prototype.",
+    "nl": "Eerder prototype."
+  },
+  "Porter une interface de suivi crypto au poignet.": {
+    "en": "Bring a crypto tracking interface to the wrist.",
+    "nl": "Een interface voor het volgen van crypto naar de pols brengen."
+  },
+  "Java · Kotlin · Galaxy Watch": {
+    "en": "Java · Kotlin · Galaxy Watch",
+    "nl": "Java · Kotlin · Galaxy Watch"
+  },
+  "Projet historique ; aucun conseil financier.": {
+    "en": "Past project; no financial advice.",
+    "nl": "Eerder project; geen financieel advies."
+  },
+  "Expérimenter une interface autour de données et graphiques de marché.": {
+    "en": "Experiment with an interface for market data and charts.",
+    "nl": "Experimenteren met een interface voor marktgegevens en grafieken."
+  },
+  "Projet historique ; aucun résultat de trading revendiqué.": {
+    "en": "Past project; no trading results claimed.",
+    "nl": "Eerder project; er worden geen handelsresultaten geclaimd."
+  },
+  "RAG local & fine-tuning": {
+    "en": "Local RAG & fine-tuning",
+    "nl": "Lokale RAG & fine-tuning"
+  },
+  "Comparer recherche documentaire locale et adaptation de modèles selon les données et les contraintes.": {
+    "en": "Compare local document retrieval with model adaptation according to data and constraints.",
+    "nl": "Lokale documentzoekfuncties vergelijken met modelaanpassing op basis van data en voorwaarden."
+  },
+  "Expérimentations techniques.": {
+    "en": "Technical experiments.",
+    "nl": "Technische experimenten."
+  },
+  "Explorer la classification textile, la vision semi-supervisée et l’apprentissage par renforcement.": {
+    "en": "Explore textile classification, semi-supervised vision and reinforcement learning.",
+    "nl": "Textielclassificatie, semi-supervised vision en reinforcement learning verkennen."
+  },
+  "Travaux d’apprentissage et prototypes.": {
+    "en": "Learning projects and prototypes.",
+    "nl": "Leerprojecten en prototypes."
+  },
+  "Recommandation & outils de tâches": {
+    "en": "Recommendations & task tools",
+    "nl": "Aanbevelingen & taaktools"
+  },
+  "Premières explorations de recommandation e-commerce et d’assistance à la gestion de tâches.": {
+    "en": "Early explorations of e-commerce recommendations and task management assistance.",
+    "nl": "Eerste verkenningen van e-commerceaanbevelingen en hulp bij taakbeheer."
+  },
+  "Archives du premier site ; statut de livraison non confirmé.": {
+    "en": "Archives from the first site; delivery status unconfirmed.",
+    "nl": "Archief van de eerste site; opleverstatus niet bevestigd."
+  },
+  "Une idée": {
+    "en": "An idea",
+    "nl": "Een idee"
+  },
+  "Capturer une intuition avant qu’elle ne se perde.": {
+    "en": "Capture an intuition before it slips away.",
+    "nl": "Een ingeving vastleggen voordat deze vervliegt."
+  },
+  "Documents": {
+    "en": "Documents",
+    "nl": "Documenten"
+  },
+  "Importer les documents et garder leurs sources.": {
+    "en": "Import documents and retain their sources.",
+    "nl": "Documenten importeren en hun bronnen bewaren."
+  },
+  "Décisions": {
+    "en": "Decisions",
+    "nl": "Besluiten"
+  },
+  "Retrouver ce qui a été décidé et dans quel contexte.": {
+    "en": "Find what was decided and in which context.",
+    "nl": "Terugvinden wat is besloten en in welke context."
+  },
+  "Relier les informations à leur chronologie.": {
+    "en": "Connect information to its timeline.",
+    "nl": "Informatie met de tijdlijn verbinden."
+  },
+  "Explorer les liens entre ses notes et ses projets.": {
+    "en": "Explore links between notes and projects.",
+    "nl": "Verbindingen tussen notities en projecten verkennen."
+  },
+  "Sources": {
+    "en": "Sources",
+    "nl": "Bronnen"
+  },
+  "Revenir au document qui soutient une réponse.": {
+    "en": "Return to the document supporting an answer.",
+    "nl": "Teruggaan naar het document dat een antwoord onderbouwt."
+  },
+  "MASTERmind / EXPLORER": {
+    "en": "MASTERmind / EXPLORER",
+    "nl": "MASTERmind / VERKENNER"
+  },
+  "LOCAL FIRST ↗": {
+    "en": "LOCAL FIRST ↗",
+    "nl": "LOKAAL EERST ↗"
+  },
+  "Illustration interactive d’un graphe de connaissance": {
+    "en": "Interactive illustration of a knowledge graph",
+    "nl": "Interactieve illustratie van een kennisgraaf"
+  },
+  "VOTRE MÉMOIRE": {
+    "en": "YOUR MEMORY",
+    "nl": "JOUW GEHEUGEN"
+  },
+  "Graphe illustratif · Explorez les points": {
+    "en": "Illustrative graph · Explore the nodes",
+    "nl": "Illustratieve graaf · Verken de punten"
+  },
+  "Le conseiller prépare sa réponse.": {
+    "en": "The advisor is preparing a reply.",
+    "nl": "De adviseur bereidt een antwoord voor."
+  },
+  "Service Attic-Ai": {
+    "en": "Attic-Ai service",
+    "nl": "Attic-Ai-dienst"
+  },
+  "Le service est indisponible. Réessayez.": {
+    "en": "The service is unavailable. Please try again.",
+    "nl": "De dienst is niet beschikbaar. Probeer het opnieuw."
+  },
+  "\nModèle : ": {
+    "en": "\nModel: ",
+    "nl": "\nModel: "
+  },
+  "Streaming indisponible.": {
+    "en": "Streaming is unavailable.",
+    "nl": "Streaming is niet beschikbaar."
+  },
+  "Réponse limitée en longueur. Vous pouvez demander de préciser un point.": {
+    "en": "The reply reached its length limit. You can ask to explore a point further.",
+    "nl": "Het antwoord heeft de lengtelimiet bereikt. Je kunt vragen om een punt verder toe te lichten."
+  },
+  "La réponse a été interrompue. Réessayez.": {
+    "en": "The reply was interrupted. Please try again.",
+    "nl": "Het antwoord is onderbroken. Probeer het opnieuw."
+  },
+  "Réponse reçue : ": {
+    "en": "Reply received: ",
+    "nl": "Antwoord ontvangen: "
+  },
+  "Le délai de réponse est dépassé. Vérifiez votre connexion et réessayez.": {
+    "en": "The response timed out. Check your connection and try again.",
+    "nl": "De wachttijd is verstreken. Controleer je verbinding en probeer het opnieuw."
+  },
+  "Génération arrêtée. Vous pouvez réessayer ou poser une autre question.": {
+    "en": "Generation stopped. You can retry or ask another question.",
+    "nl": "Generatie gestopt. Je kunt het opnieuw proberen of een andere vraag stellen."
+  },
+  "Connexion au serveur interrompue. Vérifiez votre connexion, puis réessayez.": {
+    "en": "The connection to the server was interrupted. Check your connection and try again.",
+    "nl": "De verbinding met de server is onderbroken. Controleer je verbinding en probeer het opnieuw."
+  },
+  "Ouvrir le conseiller IA": {
+    "en": "Open the AI advisor",
+    "nl": "Open de AI-adviseur"
+  },
+  "Une question ?": {
+    "en": "A question?",
+    "nl": "Een vraag?"
+  },
+  "Le conseiller Attic-Ai": {
+    "en": "The Attic-Ai advisor",
+    "nl": "De Attic-Ai-adviseur"
+  },
+  "Assistant IA ·": {
+    "en": "AI assistant ·",
+    "nl": "AI-assistent ·"
+  },
+  "Réponse en cours": {
+    "en": "Reply in progress",
+    "nl": "Antwoord wordt geschreven"
+  },
+  "Explorons votre idée": {
+    "en": "Let’s explore your idea",
+    "nl": "Laten we je idee verkennen"
+  },
+  "Nouvelle conversation": {
+    "en": "New conversation",
+    "nl": "Nieuw gesprek"
+  },
+  "Fermer le conseiller": {
+    "en": "Close the advisor",
+    "nl": "Sluit de adviseur"
+  },
+  "FAISONS CONNAISSANCE": {
+    "en": "LET’S GET ACQUAINTED",
+    "nl": "LATEN WE KENNISMAKEN"
+  },
+  "Une idée, un défi,": {
+    "en": "An idea, a challenge,",
+    "nl": "Een idee, een uitdaging,"
+  },
+  "ou juste de la curiosité ?": {
+    "en": "or just curious?",
+    "nl": "of gewoon nieuwsgierig?"
+  },
+  "Je peux vous parler de Tom, explorer les projets du studio ou vous aider à cadrer votre besoin.": {
+    "en": "I can tell you about Tom, explore the studio’s projects or help you scope your needs.",
+    "nl": "Ik kan je over Tom vertellen, de projecten van de studio toelichten of helpen je behoefte af te bakenen."
+  },
+  "Quels projets avez-vous construits ?": {
+    "en": "What projects have you built?",
+    "nl": "Welke projecten heb je gebouwd?"
+  },
+  "Comment cadrer mon projet ?": {
+    "en": "How should I scope my project?",
+    "nl": "Hoe kan ik mijn project afbakenen?"
+  },
+  "Que peut construire le studio ?": {
+    "en": "What can the studio build?",
+    "nl": "Wat kan de studio bouwen?"
+  },
+  "Le conseiller est momentanément indisponible. Vous pouvez": {
+    "en": "The advisor is temporarily unavailable. You can",
+    "nl": "De adviseur is tijdelijk niet beschikbaar. Je kunt"
+  },
+  "écrire à Tom": {
+    "en": "email Tom",
+    "nl": "Tom mailen"
+  },
+  "VOUS": {
+    "en": "YOU",
+    "nl": "JIJ"
+  },
+  "Je réfléchis": {
+    "en": "Thinking",
+    "nl": "Ik denk na"
+  },
+  "Réponse partielle": {
+    "en": "Partial reply",
+    "nl": "Gedeeltelijk antwoord"
+  },
+  "Réessayer dans ": {
+    "en": "Retry in ",
+    "nl": "Opnieuw proberen over "
+  },
+  "Réessayer": {
+    "en": "Retry",
+    "nl": "Opnieuw proberen"
+  },
+  "Écrire à Tom ↗": {
+    "en": "Email Tom ↗",
+    "nl": "Mail Tom ↗"
+  },
+  "Votre message": {
+    "en": "Your message",
+    "nl": "Je bericht"
+  },
+  "Parlez-moi de votre idée…": {
+    "en": "Tell me about your idea…",
+    "nl": "Vertel over je idee…"
+  },
+  "Arrêter la réponse": {
+    "en": "Stop the reply",
+    "nl": "Stop het antwoord"
+  },
+  "Envoyer le message": {
+    "en": "Send message",
+    "nl": "Verstuur bericht"
+  },
+  "Messages transmis à OpenRouter et au modèle. Évitez les données sensibles. Historique conservé uniquement dans cette page par le site.": {
+    "en": "Messages are sent to OpenRouter and the model provider. Avoid sensitive data. This site keeps chat history only in this page.",
+    "nl": "Berichten worden naar OpenRouter en de modelaanbieder gestuurd. Vermijd gevoelige gegevens. Deze site bewaart de chatgeschiedenis alleen in deze pagina."
+  },
+  "Conseil & architecture": {
+    "en": "Consulting & architecture",
+    "nl": "Advies & architectuur"
+  },
+  "Prototype & MVP": {
+    "en": "Prototype & MVP",
+    "nl": "Prototype & MVP"
+  },
+  "Applications & plateformes": {
+    "en": "Applications & platforms",
+    "nl": "Applicaties & platforms"
+  },
+  "Vision & apprentissage": {
+    "en": "Vision & learning",
+    "nl": "Beeldherkenning & leren"
+  },
+  "Connaissances": {
+    "en": "Knowledge",
+    "nl": "Kennis"
+  },
+  "Audit": {
+    "en": "Audit",
+    "nl": "Audit"
+  },
+  "Architecture": {
+    "en": "Architecture",
+    "nl": "Architectuur"
+  },
+  "Roadmap": {
+    "en": "Roadmap",
+    "nl": "Stappenplan"
+  },
+  "Validation": {
+    "en": "Validation",
+    "nl": "Validatie"
+  },
+  "Agents": {
+    "en": "Agents",
+    "nl": "Agents"
+  },
+  "Aller au contenu": {
+    "en": "Skip to content",
+    "nl": "Ga naar inhoud"
+  },
+  "Attic-Ai — accueil": {
+    "en": "Attic-Ai — home",
+    "nl": "Attic-Ai — home"
+  },
+  "Navigation principale": {
+    "en": "Main navigation",
+    "nl": "Hoofdnavigatie"
+  },
+  "Accueil": {
+    "en": "Home",
+    "nl": "Home"
+  },
+  "L’agence": {
+    "en": "The studio",
+    "nl": "De studio"
+  },
+  "Portfolio": {
+    "en": "Portfolio",
+    "nl": "Portfolio"
+  },
+  "Un atelier indépendant.": {
+    "en": "An independent workshop.",
+    "nl": "Een onafhankelijke werkplaats."
+  },
+  "Des idées qui prennent forme.": {
+    "en": "Ideas taking shape.",
+    "nl": "Ideeën krijgen vorm."
+  },
+  "Tom Buzon · Leiden, Pays-Bas": {
+    "en": "Tom Buzon · Leiden, Netherlands",
+    "nl": "Tom Buzon · Leiden, Nederland"
+  },
+  "Liens de pied de page": {
+    "en": "Footer links",
+    "nl": "Voettekstlinks"
+  },
+  "Services & méthode": {
+    "en": "Services & process",
+    "nl": "Diensten & werkwijze"
+  },
+  "Projets & explorations": {
+    "en": "Projects & explorations",
+    "nl": "Projecten & verkenningen"
+  },
+  "Données & contact": {
+    "en": "Data & contact",
+    "nl": "Gegevens & contact"
+  },
+  "Menu": {
+    "en": "Menu",
+    "nl": "Menu"
+  },
+  "Fermer": {
+    "en": "Close",
+    "nl": "Sluiten"
+  },
+  "Explorer Attic-Ai": {
+    "en": "Explore Attic-Ai",
+    "nl": "Verken Attic-Ai"
+  },
+  "Un pied dans le code.": {
+    "en": "One foot in code.",
+    "nl": "Eén voet in de code."
+  },
+  "L’autre dans le réel.": {
+    "en": "The other in the real world.",
+    "nl": "De andere in de echte wereld."
+  },
+  "Choisir une langue": {
+    "en": "Choose a language",
+    "nl": "Kies een taal"
+  },
+  "Navigation par chapitres": {
+    "en": "Chapter navigation",
+    "nl": "Hoofdstuknavigatie"
+  },
+  "Mouvement activé": {
+    "en": "Motion on",
+    "nl": "Beweging aan"
+  },
+  "Mouvement réduit": {
+    "en": "Reduced motion",
+    "nl": "Minder beweging"
+  },
+  "Le départ": {
+    "en": "The beginning",
+    "nl": "Het begin"
+  },
+  "La méthode": {
+    "en": "The process",
+    "nl": "De werkwijze"
+  },
+  "L’atelier": {
+    "en": "The workshop",
+    "nl": "De werkplaats"
+  },
+  "L’origine": {
+    "en": "The origin",
+    "nl": "De oorsprong"
+  },
+  "Les questions": {
+    "en": "Questions",
+    "nl": "Vragen"
+  },
+  "Le contact": {
+    "en": "Contact",
+    "nl": "Contact"
+  },
+  "Les services": {
+    "en": "Services",
+    "nl": "Diensten"
+  },
+  "Les mesures": {
+    "en": "Measures",
+    "nl": "Metingen"
+  },
+  "La personne": {
+    "en": "The person",
+    "nl": "De persoon"
+  },
+  "Le brief": {
+    "en": "The brief",
+    "nl": "De briefing"
+  },
+  "Suite de la visite": {
+    "en": "Continue exploring",
+    "nl": "Verder verkennen"
+  },
+  "Passer à la page suivante": {
+    "en": "Go to the next page",
+    "nl": "Ga naar de volgende pagina"
+  },
+  "Retour à l’accueil": {
+    "en": "Back to home",
+    "nl": "Terug naar home"
+  },
+  "SIGNAL / ATELIER": {
+    "en": "SIGNAL / WORKSHOP",
+    "nl": "SIGNAAL / WERKPLAATS"
+  },
+  "Du code, des idées, du concret.": {
+    "en": "Code, ideas, real things.",
+    "nl": "Code, ideeën, echte dingen."
+  },
+  "Modèle de secours actif": {
+    "en": "Fallback model active",
+    "nl": "Reservemodel actief"
+  },
+  "Le modèle gratuit est très sollicité. Réessayez dans un instant.": {
+    "en": "The free model is busy. Please try again shortly.",
+    "nl": "Het gratis model is druk. Probeer het zo opnieuw."
+  },
+  "Le fournisseur IA est indisponible. Réessayez plus tard.": {
+    "en": "The AI provider is unavailable. Please try again later.",
+    "nl": "De AI-aanbieder is niet beschikbaar. Probeer het later opnieuw."
+  },
+  "Le délai de réponse est dépassé. Réessayez.": {
+    "en": "The response timed out. Please try again.",
+    "nl": "De wachttijd is verstreken. Probeer het opnieuw."
+  },
+  "La réponse a été interrompue. Réessayez dans un instant.": {
+    "en": "The reply was interrupted. Please try again shortly.",
+    "nl": "Het antwoord is onderbroken. Probeer het zo opnieuw."
+  },
+  "La clé OpenRouter doit être vérifiée côté serveur.": {
+    "en": "The OpenRouter key needs to be checked on the server.",
+    "nl": "De OpenRouter-sleutel moet op de server worden gecontroleerd."
+  },
+  "Le quota OpenRouter est épuisé.": {
+    "en": "The OpenRouter quota has been exhausted.",
+    "nl": "Het OpenRouter-quotum is opgebruikt."
+  },
+  "Le modèle configuré est indisponible.": {
+    "en": "The configured model is unavailable.",
+    "nl": "Het ingestelde model is niet beschikbaar."
+  },
+  "Le modèle configuré est invalide ou indisponible.": {
+    "en": "The configured model is invalid or unavailable.",
+    "nl": "Het ingestelde model is ongeldig of niet beschikbaar."
+  },
+  "Trop de demandes. Réessayez dans une minute.": {
+    "en": "Too many requests. Please try again in a minute.",
+    "nl": "Te veel verzoeken. Probeer het over een minuut opnieuw."
+  },
+  "Le conseiller est en cours de configuration. Contactez Tom par email.": {
+    "en": "The advisor is being configured. Please email Tom.",
+    "nl": "De adviseur wordt ingesteld. Neem per e-mail contact op met Tom."
+  },
+  "Conversation invalide ou trop longue. Commencez une nouvelle discussion.": {
+    "en": "Invalid or overly long conversation. Start a new chat.",
+    "nl": "Ongeldig of te lang gesprek. Begin een nieuwe chat."
+  },
+  "Origine non autorisée.": {
+    "en": "Origin not allowed.",
+    "nl": "Herkomst niet toegestaan."
+  },
+  "\nContexte : ": {
+    "en": "\nContext: ",
+    "nl": "\nContext: "
+  },
+  "\nSupport : ": {
+    "en": "\nPlatform: ",
+    "nl": "\nPlatform: "
+  },
+  "\nBudget : ": {
+    "en": "\nBudget: ",
+    "nl": "\nBudget: "
+  },
+  "À L’INTÉRIEUR DE L’ATELIER": {
+    "en": "INSIDE THE STUDIO",
+    "nl": "BINNEN IN HET ATELIER"
+  },
+  "Entrez. On fabrique ici.": {
+    "en": "Come in. We build here.",
+    "nl": "Kom binnen. Hier bouwen we."
+  },
+  "Un lieu pour relier les idées aux outils. Et les outils à de vrais usages.": {
+    "en": "A place to connect ideas to tools. And tools to real uses.",
+    "nl": "Een plek waar ideeën en gereedschap samenkomen. En gereedschap echt wordt gebruikt."
+  },
+  "Partir de votre besoin": {
+    "en": "Start with your needs",
+    "nl": "Begin bij je behoefte"
+  },
+  "Les disciplines se parlent.": {
+    "en": "Disciplines in conversation.",
+    "nl": "Disciplines in gesprek."
+  },
+  "Du code au son, de l’image à l’objet. Le même plaisir de comprendre et de construire.": {
+    "en": "From code to sound, from image to object. The same joy in understanding and building.",
+    "nl": "Van code naar geluid, van beeld naar object. Hetzelfde plezier in begrijpen en bouwen."
+  },
+  "L’histoire de l’atelier": {
+    "en": "The studio’s story",
+    "nl": "Het verhaal van het atelier"
+  },
+  "Une idée n’est jamais seule.": {
+    "en": "An idea is never alone.",
+    "nl": "Een idee staat nooit alleen."
+  },
+  "Des fragments, des liens, une mémoire qui prend forme.": {
+    "en": "Fragments, connections, a memory taking shape.",
+    "nl": "Fragmenten, verbindingen, een geheugen dat vorm krijgt."
+  },
+  "Écouter change la perspective.": {
+    "en": "Listening changes the perspective.",
+    "nl": "Luisteren verandert je perspectief."
+  },
+  "Quand le son devient une façon de se repérer.": {
+    "en": "When sound becomes a way to find your bearings.",
+    "nl": "Wanneer geluid een manier wordt om je weg te vinden."
+  },
+  "Donner un rythme aux images.": {
+    "en": "Give images a rhythm.",
+    "nl": "Geef beelden een ritme."
+  },
+  "De la séquence brute à une histoire que l’on peut regarder.": {
+    "en": "From raw footage to a story you can watch.",
+    "nl": "Van ruwe beelden naar een verhaal om naar te kijken."
+  },
+  "Découvrir le projet": {
+    "en": "Explore the project",
+    "nl": "Ontdek het project"
+  },
+  "Le conseil prend forme.": {
+    "en": "Advice takes shape.",
+    "nl": "Advies krijgt vorm."
+  },
+  "Une décision éclairée. Un prototype concret. Un produit que vous pouvez reprendre.": {
+    "en": "An informed decision. A working prototype. A product you can take forward.",
+    "nl": "Een onderbouwde beslissing. Een werkend prototype. Een product waarmee je verder kunt."
+  },
+  "Explorer les services": {
+    "en": "Explore the services",
+    "nl": "Ontdek de diensten"
+  },
+  "Le modèle gratuit tarde à répondre. Votre demande est toujours en cours ; vous pouvez l’arrêter ci-dessous.": {
+    "en": "The free model is taking a while to respond. Your request is still running; you can stop it below.",
+    "nl": "Het gratis model doet er wat langer over. Je verzoek loopt nog; je kunt het hieronder stoppen."
+  },
+  "Le mouvement est réduit dans les préférences de votre appareil.": {
+    "en": "Motion is reduced in your device preferences.",
+    "nl": "Beweging is verminderd in de voorkeuren van je apparaat."
+  },
+  "Le studio": {
+    "en": "The studio",
+    "nl": "De studio"
+  },
+  "Le portfolio": {
+    "en": "The portfolio",
+    "nl": "Het portfolio"
+  },
+  "Choisissez la suite": {
+    "en": "Choose your next stop",
+    "nl": "Kies je volgende stap"
+  },
+  "Deux façons d’entrer dans l’atelier : comprendre comment nous pouvons travailler ensemble, ou explorer ce qui se construit ici.": {
+    "en": "Two ways into the workshop: see how we can work together, or explore what is being built here.",
+    "nl": "Twee manieren om het atelier te ontdekken: bekijk hoe we kunnen samenwerken, of ontdek wat hier wordt gebouwd."
+  },
+  "LE STUDIO": {
+    "en": "THE STUDIO",
+    "nl": "DE STUDIO"
+  },
+  "LE PORTFOLIO": {
+    "en": "THE PORTFOLIO",
+    "nl": "HET PORTFOLIO"
+  },
+  "Du besoin au livrable.": {
+    "en": "From need to deliverable.",
+    "nl": "Van behoefte naar resultaat."
+  },
+  "Services, méthode et critères de réussite : trouvez le bon point de départ pour votre projet.": {
+    "en": "Services, process and success criteria: find the right starting point for your project.",
+    "nl": "Diensten, werkwijze en succescriteria: vind het juiste vertrekpunt voor je project."
+  },
+  "Explorer le studio": {
+    "en": "Explore the studio",
+    "nl": "Ontdek de studio"
+  },
+  "Les idées à l’épreuve.": {
+    "en": "Ideas put to the test.",
+    "nl": "Ideeën in de praktijk."
+  },
+  "Produits, prototypes et explorations : découvrez les choix techniques, les usages et les limites.": {
+    "en": "Products, prototypes and explorations: discover the technical choices, uses and limitations.",
+    "nl": "Producten, prototypes en verkenningen: ontdek de technische keuzes, toepassingen en beperkingen."
+  },
+  "Explorer les projets": {
+    "en": "Explore the projects",
+    "nl": "Ontdek de projecten"
+  },
+  "Avant le code, une décision.": {
+    "en": "Before the code, a decision.",
+    "nl": "Eerst een besluit. Dan de code."
+  },
+  "Autour de la table, on transforme une demande en périmètre vérifiable. L’établi vient ensuite.": {
+    "en": "Around the table, we turn a request into a scope we can test. Then we move to the workbench.",
+    "nl": "Aan tafel vertalen we een vraag naar een toetsbare scope. Daarna gaan we naar de werkbank."
+  },
+  "Trouver le bon accompagnement": {
+    "en": "Find the right support",
+    "nl": "Vind de juiste begeleiding"
+  },
+  "Usages, contraintes et risques prioritaires.": {
+    "en": "Uses, constraints and priority risks.",
+    "nl": "Toepassingen, randvoorwaarden en belangrijkste risico’s."
+  },
+  "Un prototype pour tester l’hypothèse centrale.": {
+    "en": "A prototype to test the central assumption.",
+    "nl": "Een prototype om de belangrijkste aanname te toetsen."
+  },
+  "Code, documentation et critères de reprise.": {
+    "en": "Code, documentation and handover criteria.",
+    "nl": "Code, documentatie en overdrachtscriteria."
+  },
+  "Le portfolio · Mémoire": {
+    "en": "Portfolio · Memory",
+    "nl": "Portfolio · Geheugen"
+  },
+  "Retrouver le fil.": {
+    "en": "Pick up the thread.",
+    "nl": "Vind de rode draad."
+  },
+  "Mastermind relie les notes, leurs sources et les décisions. Le graphe ouvre la visite ; l’étude de cas explique ce qu’il permet réellement.": {
+    "en": "Mastermind connects notes, sources and decisions. The graph opens the tour; the case study explains what it actually enables.",
+    "nl": "Mastermind verbindt notities, bronnen en beslissingen. De graaf opent de rondleiding; de casestudy laat zien wat je ermee kunt."
+  },
+  "Explorer Mastermind": {
+    "en": "Explore Mastermind",
+    "nl": "Ontdek Mastermind"
+  },
+  "Notes Markdown et documents.": {
+    "en": "Markdown notes and documents.",
+    "nl": "Markdown-notities en documenten."
+  },
+  "Graphe et recherche hybride.": {
+    "en": "Graph and hybrid search.",
+    "nl": "Graaf en hybride zoekfunctie."
+  },
+  "RAG local, réponses reliées aux sources.": {
+    "en": "Local RAG, answers connected to sources.",
+    "nl": "Lokale RAG, antwoorden gekoppeld aan bronnen."
+  },
+  "Le portfolio · Perception": {
+    "en": "Portfolio · Perception",
+    "nl": "Portfolio · Waarneming"
+  },
+  "Se repérer autrement.": {
+    "en": "Find your bearings differently.",
+    "nl": "Vind op een andere manier je weg."
+  },
+  "Avec VESPER, l’information devient sonore. Une voix et des repères situés accompagnent l’exploration d’un vaisseau.": {
+    "en": "With VESPER, information becomes sound. A voice and situated cues guide the exploration of a ship.",
+    "nl": "Bij VESPER wordt informatie hoorbaar. Een stem en ruimtelijke aanwijzingen begeleiden de verkenning van een schip."
+  },
+  "Explorer VESPER": {
+    "en": "Explore VESPER",
+    "nl": "Ontdek VESPER"
+  },
+  "Terrain": {
+    "en": "Setting",
+    "nl": "Omgeving"
+  },
+  "Un prototype jouable sous Godot.": {
+    "en": "A playable prototype built in Godot.",
+    "nl": "Een speelbaar prototype in Godot."
+  },
+  "Navigation, voix et repères sonores.": {
+    "en": "Navigation, voice and audio cues.",
+    "nl": "Navigatie, stem en geluidsaanwijzingen."
+  },
+  "À éprouver": {
+    "en": "Still to test",
+    "nl": "Nog te toetsen"
+  },
+  "L’usage avec les publics concernés.": {
+    "en": "Use with the people concerned.",
+    "nl": "Het gebruik met de beoogde doelgroep."
+  },
+  "Le portfolio · Création": {
+    "en": "Portfolio · Creation",
+    "nl": "Portfolio · Creatie"
+  },
+  "Passer du son au montage.": {
+    "en": "From sound to the edit.",
+    "nl": "Van geluid naar montage."
+  },
+  "FrameForge part d’un audio, organise ses temps forts et prépare une séquence vidéo. Chaque automatisation sert une intention de réalisation.": {
+    "en": "FrameForge starts with audio, organises its key moments and prepares a video sequence. Each automation serves a directorial intent.",
+    "nl": "FrameForge begint met audio, ordent de hoogtepunten en bereidt een videosequentie voor. Elke automatisering dient een creatieve bedoeling."
+  },
+  "Explorer FrameForge": {
+    "en": "Explore FrameForge",
+    "nl": "Ontdek FrameForge"
+  },
+  "Analyser": {
+    "en": "Analyse",
+    "nl": "Analyseren"
+  },
+  "Temps forts et transcription horodatée.": {
+    "en": "Key moments and timestamped transcription.",
+    "nl": "Hoogtepunten en transcriptie met tijdcodes."
+  },
+  "Composer": {
+    "en": "Compose",
+    "nl": "Samenstellen"
+  },
+  "Storyboard et scènes.": {
+    "en": "Storyboard and scenes.",
+    "nl": "Storyboard en scènes."
+  },
+  "Produire": {
+    "en": "Produce",
+    "nl": "Produceren"
+  },
+  "Rendu vidéo avec Remotion.": {
+    "en": "Video rendering with Remotion.",
+    "nl": "Videorendering met Remotion."
+  },
+  "Le portfolio · Espace": {
+    "en": "Portfolio · Space",
+    "nl": "Portfolio · Ruimte"
+  },
+  "Donner du volume à l’idée.": {
+    "en": "Give the idea volume.",
+    "nl": "Geef het idee volume."
+  },
+  "Le parcours arrive à la maquette : observer les proportions, travailler les matières et vérifier un point de vue. Puis comparer avec le rendu réel du projet Blender.": {
+    "en": "The tour reaches the model: observe proportions, work on materials and check a viewpoint. Then compare it with the actual Blender project render.",
+    "nl": "De rondleiding komt aan bij de maquette: bekijk de verhoudingen, werk aan materialen en toets een gezichtspunt. Vergelijk dit daarna met de echte render van het Blender-project."
+  },
+  "Voir le travail de modélisation": {
+    "en": "See the modelling work",
+    "nl": "Bekijk de modellering"
+  },
+  "Le point de départ": {
+    "en": "The starting point",
+    "nl": "Het vertrekpunt"
+  },
+  "Du premier échange au premier usage, le projet passe par des étapes concrètes.": {
+    "en": "From the first conversation to the first real use, the project takes shape through concrete steps.",
+    "nl": "Van het eerste gesprek tot het eerste gebruik krijgt het project vorm in concrete stappen."
+  },
+  "Comprendre": {
+    "en": "Understand",
+    "nl": "Begrijpen"
+  },
+  "Avant de choisir un outil, définir qui l’utilisera et ce qui doit changer.": {
+    "en": "Before choosing a tool, define who will use it and what needs to change.",
+    "nl": "Bepaal wie het gaat gebruiken en wat er moet veranderen voordat je een tool kiest."
+  },
+  "À l’établi, une idée devient un prototype que l’on peut essayer.": {
+    "en": "At the workbench, an idea becomes a prototype you can try.",
+    "nl": "Aan de werkbank wordt een idee een prototype dat je kunt uitproberen."
+  },
+  "Vérifier": {
+    "en": "Verify",
+    "nl": "Toetsen"
+  },
+  "Un résultat observable permet de décider de la suite.": {
+    "en": "An observable result helps decide what comes next.",
+    "nl": "Een waarneembaar resultaat helpt de volgende stap te bepalen."
+  },
+  "L’atelier en mouvement": {
+    "en": "Through the workshop",
+    "nl": "Door de werkplaats"
+  },
+  "Une information à retrouver. Un son à situer. Un espace à imaginer. Chaque discipline apporte une autre façon de résoudre le problème.": {
+    "en": "Information to find. A sound to locate. A space to imagine. Each discipline offers another way to solve the problem.",
+    "nl": "Informatie terugvinden. Een geluid lokaliseren. Een ruimte bedenken. Elke discipline biedt een andere manier om het probleem op te lossen."
+  },
+  "Explorer les réalisations": {
+    "en": "Explore the work",
+    "nl": "Ontdek het werk"
+  },
+  "Relier l’information": {
+    "en": "Connect information",
+    "nl": "Informatie verbinden"
+  },
+  "Données, recherche et interfaces : rendre une information retrouvable et utilisable.": {
+    "en": "Data, search and interfaces: making information findable and useful.",
+    "nl": "Data, zoeken en interfaces: informatie vindbaar en bruikbaar maken."
+  },
+  "Travailler la perception": {
+    "en": "Shape perception",
+    "nl": "Waarneming vormgeven"
+  },
+  "Voix, son et vidéo : choisir la bonne façon de transmettre une information.": {
+    "en": "Voice, sound and video: choosing the right way to convey information.",
+    "nl": "Stem, geluid en video: de juiste manier kiezen om informatie over te brengen."
+  },
+  "Passer au volume": {
+    "en": "Move into space",
+    "nl": "De ruimte in"
+  },
+  "3D et objets connectés : prolonger une expérience au-delà de l’écran.": {
+    "en": "3D and connected objects: taking an experience beyond the screen.",
+    "nl": "3D en verbonden objecten: een ervaring verder brengen dan het scherm."
+  },
+  "Les proportions": {
+    "en": "Proportions",
+    "nl": "Verhoudingen"
+  },
+  "Composer un espace à l’échelle de ses usages.": {
+    "en": "Designing a space around how it will be used.",
+    "nl": "Een ruimte ontwerpen op de schaal van het gebruik."
+  },
+  "Les matières": {
+    "en": "Materials",
+    "nl": "Materialen"
+  },
+  "Faire dialoguer les surfaces, la lumière et les objets.": {
+    "en": "Bringing surfaces, light and objects together.",
+    "nl": "Oppervlakken, licht en objecten op elkaar laten inspelen."
+  },
+  "Le point de vue": {
+    "en": "The viewpoint",
+    "nl": "Het perspectief"
+  },
+  "Tourner autour d’une idée pour mieux la comprendre.": {
+    "en": "Looking at an idea from different angles to understand it better.",
+    "nl": "Een idee vanuit verschillende hoeken bekijken om het beter te begrijpen."
+  }
+}
