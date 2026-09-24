@@ -1,5 +1,6 @@
 import { useLocale } from "../i18n/Locale";
 import SpatialPassage from '../components/SpatialPassage';
+import { publicUrl } from '../lib/publicUrl';
 export default function Home() {
   const {
     t,
@@ -7,7 +8,7 @@ export default function Home() {
   } = useLocale();
   return <>
     <section className="home-hero" data-scene-stop="0">
-      <img className="attic-image" src="/images/attic-studio.webp" alt="" width="1672" height="941" />
+      <img className="attic-image" src={publicUrl('/images/attic-studio.webp')} alt="" width="1672" height="941" />
       <div className="hero-shade" /><div className="hero-image-slice slice-one" aria-hidden="true" /><div className="hero-image-slice slice-two" aria-hidden="true" />
       <div className="hero-copy wrap">
         <p className="overline"><span className="small-line" />{t(" AGENCE DE BUILD & CONSEIL · LEIDEN")}</p>

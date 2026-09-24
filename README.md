@@ -85,3 +85,11 @@ Avant publication : renseigner le domaine canonique, le sitemap et l’identité
 `src/scene/tour.js` définit les trajectoires des trois pages et le lien entre hauteur des sections et progression de caméra. `src/scene/atticWorld.js` construit le grenier central, l’aile studio et la galerie supplémentaire. `SpatialPassage.jsx` fait évoluer trois temps de texte pendant les travellings ; les textes sont pré-rendus et tous visibles en version mobile ou sans animation. Les traductions se trouvent dans `src/i18n/catalog.json`.
 
 Le test `tests/tour.test.js` couvre les hauteurs variables, le retour arrière et le dégagement des trajets par rapport aux murs, plafonds et stations, avec le cadrage mobile.
+
+## Démo GitHub Pages
+
+Le déploiement est géré par `.github/workflows/pages.yml` : installation, lint, build statique, tests puis publication de `dist`. Dans Settings → Pages, la source doit être **GitHub Actions**, et non « Deploy from a branch » à la racine (qui publierait le code source JSX).
+
+`npm run build:pages` prépare les neuf pages sous `/M-IA/` et masque le chat pour cette démo sans serveur. Les liens de navigation, changements de langue, images et textures WebGL utilisent ce préfixe. Aucun secret ni `.env` n’est requis par GitHub Actions. `npm run build` conserve la version complète à la racine avec son chat.
+
+Pour un autre préfixe, définir `SITE_BASE` avant le build. Pour un domaine dédié à la racine : `SITE_BASE=/`. La démo reste une version de présentation ; le backend OpenRouter n’est pas publié sur Pages.

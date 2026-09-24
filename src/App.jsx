@@ -77,7 +77,7 @@ function Shell({ page }) {
     <a className="next-page" href={url(next[1])}><span>{t('Suite de la visite')} / 0{pages.indexOf(next)+1}</span><strong>{t(next[2])}</strong><b aria-hidden="true">↗</b></a>
    </footer>
    <button className="motion-toggle" disabled={systemReduced} title={systemReduced?t('Le mouvement est réduit dans les préférences de votre appareil.'):undefined} aria-pressed={!motion} onClick={()=>{const next=!motion;setMotion(next);try{localStorage.setItem('attic-motion',next?'on':'off');}catch { /* Storage can be unavailable in private browsing. */ }}}><span className="motion-bars" aria-hidden="true"><i/><i/><i/></span>{t(motion?'Mouvement activé':'Mouvement réduit')}</button>
-   <Chatbot/>
+   {import.meta.env.VITE_STATIC_DEMO !== 'true' && <Chatbot/>}
  </div>;
 }
 Shell.propTypes={page:PropTypes.string.isRequired};

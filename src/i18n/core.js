@@ -1,4 +1,5 @@
 import catalog from './catalog.json';
+import { publicUrl } from '../lib/publicUrl';
 export const locales = ['fr', 'en', 'nl'];
 export function translate(text, locale = 'fr') {
   if (locale === 'fr' || typeof text !== 'string') return text;
@@ -15,6 +16,8 @@ export function localizeData(data, locale) {
 }
 export function localeUrl(path, locale = 'fr') {
   if (!path.startsWith('/') || path.startsWith('//') || path.startsWith('/api/')) return path;
-  const clean = path.replace(/^\/(en|nl)(?=\/|$)/, '') || '/';
-  return locale === 'fr' ? clean : '/' + locale + clean;
+  const base = import.meta.env.BASE_URL;
+  const unprefixed = base !== '/' && path.startsWith(base) ? '/' + path.slice(base.length) : path;
+  const clean = unprefixed.replace(/^\/(en|nl)(?=\/|$)/, '') || '/';
+  return publicUrl(locale === 'fr' ? clean : '/' + locale + clean);
 }

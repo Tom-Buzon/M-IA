@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { publicUrl } from '../lib/publicUrl';
 import { tourRoutes, measureTour, sampleTour } from './tour.js';
 import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
@@ -452,7 +453,7 @@ export function createAtticWorld(host, { page, onReady, onFailure }) {
     const panelMaterial=new THREE.MeshBasicMaterial({map:screenTexture(panel.kind),toneMapped:false});
     const display=add(new THREE.PlaneGeometry(4.2,height),panelMaterial,mount);display.position.set(0,2.8,.096);
     if(panel.image){
-      const texture=textureLoader.load(panel.image,loaded=>{if(!alive){loaded.dispose();return;}loaded.colorSpace=THREE.SRGBColorSpace;panelMaterial.map=loaded;panelMaterial.needsUpdate=true;},undefined,()=>{});textures.push(texture);
+      const texture=textureLoader.load(publicUrl(panel.image),loaded=>{if(!alive){loaded.dispose();return;}loaded.colorSpace=THREE.SRGBColorSpace;panelMaterial.map=loaded;panelMaterial.needsUpdate=true;},undefined,()=>{});textures.push(texture);
     }
     const caption=label(panel.title,4,'#e5bf91');mount.add(caption);caption.position.set(0,4.75,.1);
     box(4.7,.07,.4,0,4.45,.08,oak,mount);box(4.15,.02,.035,0,4.39,.24,amber,mount);

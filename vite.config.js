@@ -6,6 +6,7 @@ for(const lang of ['fr','en','nl'])for(const [page,route]of [['home',''],['agenc
  input[lang+'-'+page]=fileURLToPath(new URL('./'+(lang==='fr'?'':lang+'/')+route+'index.html',import.meta.url));
 }
 export default defineConfig({
+ base:process.env.SITE_BASE || '/',
  plugins:[react()],
  build:{rollupOptions:{input}},
  server:{proxy:{'/api':'http://127.0.0.1:3001'}},
